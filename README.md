@@ -20,6 +20,10 @@ da repetição dos padrões exibidos no monitor, os quais são pré-determinados
 Desse modo, um jogador pode acumular pontos por acertos e participar de diversas rodadas competindo
 por melhores pontuações, explorando novos padrões de jogabilidade, além de acompanhar o seu desempenho.
 
+![Figura 1 - Jogo de ritmo “Taiko no Tatsujin”](images/drums.jpg)
+
+![Figura 1 - Jogo de ritmo “Taiko no Tatsujin”](images/guitar.jpg)
+
 ### Objetivos
 
 O objetivo deste projeto é adaptar um jogo de ritmo em realidade aumentada dentro do módulo

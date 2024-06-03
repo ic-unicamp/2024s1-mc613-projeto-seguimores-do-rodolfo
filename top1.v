@@ -86,7 +86,6 @@ wire [19:0] contador_V;
 end*/ 
 assign contador_V = next_y * 10'd640 + next_x;
 
-
 camera camera(
   // inputs
   .CLOCK_24(CLOCK_24),

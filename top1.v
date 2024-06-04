@@ -19,6 +19,12 @@ module top1(
 wire CLOCK_24;
 wire CLOCK_25;
 wire rst = !KEY[0];
+
+wire [3:0] pattern_out_ptr1;
+wire [7:0] y_pos_ptr1;
+wire [3:0] command_out_ptr1;
+
+
 PLL clk_24(
   .refclk(CLOCK_50),
   .rst(rst),
@@ -29,6 +35,16 @@ pll_vga pll_vga_inst(
   .refclk (CLOCK_50),
   .rst(rst),
   .outclk_0(CLOCK_25)
+);
+
+patter ptr1(
+  .CLOCK_24(CLOCK_24),
+  .command_in(4'b1011),
+  .y_ini_pos(640),
+  .reset(rst),
+  .command_out(command_out),
+  .y_pos(y_pos_ptr1),
+  .sprite_pattern(pattern_out_ptr1)
 );
 
 /* assign GPIO_1[31] = CLOCK_24; */

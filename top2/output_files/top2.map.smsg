@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at pattern.v(19): always construct contains both blocking and non-blocking assignments File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 19

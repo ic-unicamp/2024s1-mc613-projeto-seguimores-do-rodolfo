@@ -42,9 +42,17 @@ pll_vga pll_vga_inst(
   wire VSYNC;      
   wire HREF;       
   wire PCLK;
+  wire e_pix;
+  wire verde;
   wire [7:0] D;
   wire [18:0] contador_C;
   wire [7:0] Y_in; 
+  wire [7:0] Y_2; 
+  wire [7:0] Y_verde; 
+  wire [7:0] Y_verde2;
+  wire [7:0] Y_enter; 
+  signed wire [7:0] Cb; 
+  signed wire [7:0] Cr; 
   wire enable_d; 
 
   //assign GPIO_1[26] = SDIOC;
@@ -74,17 +82,14 @@ pll_vga pll_vga_inst(
   assign GPIO_1[17:0] = 18'bz;
   assign GPIO_1[35:32] = 4'bz;
   assign GPIO_1[27:26] = 2'bz;
+
 wire [9:0] next_x;
 wire [9:0] next_y;
 wire [7:0] Y_out;
 wire [19:0] contador_V;
-//reg [19:0] contador_V;
 
-
-/*always @(negedge CLOCK_25) begin
-  contador_V = next_y * 640 + next_x;
-end*/ 
 assign contador_V = next_y * 10'd640 + next_x;
+
 
 camera camera(
   // inputs
@@ -99,16 +104,47 @@ camera camera(
   // outputs
   .e_data(enable_d),
   .Y(Y_in),
+  .Y_2(Y_2),
+  .Cb(Cb),
+  .Cr(Cr),
+  .e_pix(e_pix),
   .VSYNC(VSYNC),
   .HREF(HREF),
   .CONTADOR_C(contador_C),
   .PCLK(PCLK)
 );
+detectorVerde dec_Y(
+  .KEY(KEY), 
+  .e_pix(e_pix),
+  .Y(Y_in),
+  .Cb(Cb),
+  .Cr(Cr),
+  .verde(verde), 
+  Y_out(Y_verde)
+)
+
+detectorVerde dec_Y2(
+  .KEY(KEY), 
+  .e_pix(e_pix),
+  .Y(Y_2),
+  .Cb(Cb),
+  .Cr(Cr),
+  .verde(verde), 
+  Y_out(Y_verde2)
+)
+
+reg c; 
+always @(posedge PCLK) begin //Ajustado o conteúdo gravado na RAM
+  c = !c; 
+  if(c) begin 
+    Y_enter = Y_verde;
+  end else Y_enter = Y_verde2;
+end 
 
 framebuffer framebuffer(
   .CLOCK_25(CLOCK_25),
   .CLOCK_24(CLOCK_24),
-  .Y_in(Y_in),
+  .Y_in(Y_enter),
   .en(enable_d),
   .contador_C(contador_C),
   .contador_V(contador_V),

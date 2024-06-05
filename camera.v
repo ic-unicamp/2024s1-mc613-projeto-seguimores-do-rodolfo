@@ -12,72 +12,60 @@ module camera(
     output XCLK,                     // System clock
     output RESET,                    // Reset (active low)
     output PWDN,                     // Power down (active high)
-    output reg [19:0] CONTADOR_C,    //Camera counter
-    output reg e_data,               // Enable Data
-    output reg [7:0] Y,                  // Byte Y output    
-    output eh_verde
+    output reg [19:0] CONTADOR_C,   //Camera counter
+    output reg e_data,              // Enable Data (Y)
+    output reg e_pix,               // Enable read two pixels
+    output reg [7:0] Y,             // Byte Y output    
+    output signed reg [7:0] Cb,     // Byte Y output  
+    output signed reg [7:0] Cr,     // Byte Y output  
+    output reg [7:0] Y_2,           // Second Byte Y output  
 );
 
     assign XCLK = CLOCK_24;
     assign RESET = KEY[0];
     assign PWDN = 0;
 
-    reg [7:0] Cr;
-    reg [7:0] Cb;
-
-    //reg byte_Y; 
-    //reg byte_Cx;
-
     reg [1:0] byte_count; //Contador de bytes
     always @(posedge PCLK) begin
         if(!RESET) begin 
             e_data <= 0;
+            e_pix <= 0;
             CONTADOR_C <= 0; // Reinicia o contador
-            //byte_Y <= 0; 
             byte_count <= 0; 
             Y <= 0; 
+            Y_2 <= 0; 
             Cr <= 0; 
             Cb <= 0; 
         end else if (VSYNC) begin 
             e_data <= 0;
-            CONTADOR_C <= 0; // Reinicia o contador
-            //byte_Y <= 0; 
-            //byte_Cx <= 0;
+            e_pix <= 0;
+            CONTADOR_C <= 0; 
             byte_count <= 0; 
             Y <= 0;
+            Y_2 <= 0; 
             Cr <= 0; 
             Cb <= 0; 
         end else if (HREF) begin 
             e_data <= 0;
-            //byte_Y <= !byte_Y;
+            e_pix <= 0;
             byte_count <= byte_count + 1; 
             case (byte_count)
-                2'b00: Cb = D;
+                2'b00: Cb = D; //Capturando chroma blue
                 2'b01: begin 
-                    Y = D;
-                    CONTADOR_C <= CONTADOR_C + 1; // Incrementa o contador
+                    Y = D; //Capturando luminancia 1
+                    CONTADOR_C <= CONTADOR_C + 1; // Incrementa o endereco de escrita do buffer
                     e_data <= 1;
                 end
-                2'b10: Cr = D;
+                2'b10: Cr = D; //Capturando chroma red
                 2'b11: begin 
-                    Y = D;
-                    CONTADOR_C <= CONTADOR_C + 1; // Incrementa o contador
+                    Y = D; //Enviando a 2a luminancia para a RAM
+                    Y_2 = D; //Capturando luminancia 2
+                    CONTADOR_C <= CONTADOR_C + 1; // Incrementa o endereco de escrita do buffer
                     e_data <= 1;
+                    e_pix <= 1;
                 end
-            endcase
-            /*if(byte_Y == 1) begin 
-                CONTADOR_C <= CONTADOR_C + 1; // Incrementa o contador
-                e_data <= 1;
-                Y = D;
-            end
-            else begin
-                byte_Cx <= !byte_Cx;
-                if (byte_Cx == 1) Cr = D;
-                else Cb = D;
-            end */    
+            endcase  
         end 
     end    
-assign eh_verde = ((Cb >= 8'd80 && Cb <= 8'd120) && (Cr >= 8'd130 && Cr <= 8'd170));
-//assign eh_verde = Cb[0] && Cr[0];
 
 endmodule

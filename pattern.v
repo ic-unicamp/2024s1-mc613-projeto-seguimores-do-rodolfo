@@ -23,7 +23,7 @@ always @(posedge CLOCK_24) begin
         if (reset) begin
             y_pos <= y_ini_pos;
         end else begin
-            y_pos <= y_pos + 1;
+            y_pos <= y_pos - 1;
         end
         
         // A verificação se o sprite chegou a fim da tela será feita no top, que tbm mudará o padrão

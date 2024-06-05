@@ -32,10 +32,12 @@ assign B_in = command_out_ptr1[2] || command_out_ptr1[3] ? 8'b11111111 : 8'b0000
 
 
 patter ptr1(
-  .CLOCK_24(CLOCK_24),
+  .CLOCK_25(CLOCK_25),
   .command_in(4'b1011),
   .y_ini_pos(640),
   .reset(rst),
+  .next_x(next_x),
+  .next_y(next_y),
   .command_out(command_out),
   .y_pos(y_pos_ptr1),
   .sprite_pattern(pattern_out_ptr1)

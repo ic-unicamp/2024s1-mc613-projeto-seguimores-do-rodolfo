@@ -17,18 +17,12 @@ wire CLOCK_24;
 wire CLOCK_25;
 wire rst = !SW[0];
 
-<<<<<<< HEAD
 wire [3:0] command_out_ptr1;
 wire [7:0] y_pos_ptr1;
 wire [3:0] sprite_ptr1;
 wire [3:0] command_out_ptr2;
 wire [7:0] y_pos_ptr2;
 wire [3:0] sprite_ptr2;
-=======
-wire [3:0] pattern_out_ptr1;
-wire [7:0] y_pos_ptr1;
-wire [3:0] sprite_ptr1;
->>>>>>> origin/patterns-sprites
 
 wire [7:0] R_in;
 wire [7:0] G_in;
@@ -36,19 +30,15 @@ wire [7:0] B_in;
 
 // Mudar a atribuição de R_in, G_in e B_in para adicionar transparencia -> passar só os bits mais significativos de cor
 
-<<<<<<< HEAD
-assign R_in = ((sprite_ptr1[0] || sprite_ptr1[3]) || (sprite_ptr2[0] || sprite_ptr2[3])) ? 8'b11111111 : 8'b00000000;
-assign G_in = ((sprite_ptr1[1] || sprite_ptr1[3]) || (sprite_ptr2[1] || sprite_ptr2[3])) ? 8'b11111111 : 8'b00000000;
-assign B_in = ((sprite_ptr1[2]) || (sprite_ptr2[2])) ? 8'b11111111 : 8'b00000000;
-=======
-assign R_in = sprite_ptr1[0] ? 8'b11111111 : 8'b00000000;
-assign G_in = sprite_ptr1[1] || sprite_ptr1[3] ? 8'b11111111 : 8'b00000000;
-assign B_in = sprite_ptr1[2] || sprite_ptr1[3] ? 8'b11111111 : 8'b00000000;
->>>>>>> origin/patterns-sprites
+assign R_in = (((next_y > 450) && (next_y <= 458)) || (sprite_ptr1[0] || sprite_ptr1[3]) || (sprite_ptr2[0] || sprite_ptr2[3])) ? 8'b11111111 : 8'b00000000;
+assign G_in = (((next_y > 450) && (next_y <= 458)) || (sprite_ptr1[1] || sprite_ptr1[3]) || (sprite_ptr2[1] || sprite_ptr2[3])) ? 8'b11111111 : 8'b00000000;
+assign B_in = (((next_y > 450) && (next_y <= 458)) || (sprite_ptr1[2]) || (sprite_ptr2[2])) ? 8'b11111111 : 8'b00000000;
+
 
 
 pattern ptr1(
   .CLOCK_25(CLOCK_25),
+  .KEY(KEY),
   .command_in(4'b0100),
   .y_ini_pos(0),
   .reset(rst),
@@ -57,7 +47,6 @@ pattern ptr1(
   .command_out(command_out_ptr2),
   .y_pos(y_pos_ptr1),
   .sprite_pattern(sprite_ptr1)
-<<<<<<< HEAD
 );
 
 pattern ptr2(
@@ -70,8 +59,6 @@ pattern ptr2(
   .command_out(command_out_ptr2),
   .y_pos(y_pos_ptr2),
   .sprite_pattern(sprite_ptr2)
-=======
->>>>>>> origin/patterns-sprites
 );
 
 pll_vga pll_vga_inst(

@@ -1,4 +1,4 @@
-module top1(
+module top2(
   input CLOCK_50,
   input [3:0] KEY, // para o reset
 
@@ -7,8 +7,8 @@ module top1(
   output [7:0] VGA_R,
   output [7:0] VGA_G,
   output [7:0] VGA_B,
-  output VGA_SYNC_N,
-  output VGA_BLANK_N,
+  output VGA_SYNC_N = 1,
+  output VGA_BLANK_N = 1,
   output VGA_CLK
 );
 
@@ -26,15 +26,15 @@ wire [7:0] B_in;
 
 // Mudar a atribuição de R_in, G_in e B_in para adicionar transparencia -> passar só os bits mais significativos de cor
 
-assign R_in = command_out_ptr1[0] ? 8'b11111111 : 8'b00000000;
-assign G_in = command_out_ptr1[1] || command_out_ptr1[3] ? 8'b11111111 : 8'b00000000;
-assign B_in = command_out_ptr1[2] || command_out_ptr1[3] ? 8'b11111111 : 8'b00000000;
+assign R_in = 127;//command_out_ptr1[0] ? 8'b11111111 : 8'b00000000;
+assign G_in = 127;//(command_out_ptr1[1] || command_out_ptr1[3]) ? 8'b11111111 : 8'b00000000;
+assign B_in = 127;//(command_out_ptr1[2] || command_out_ptr1[3]) ? 8'b11111111 : 8'b00000000;
 
 
-patter ptr1(
+pattern ptr1(
   .CLOCK_25(CLOCK_25),
   .command_in(4'b1011),
-  .y_ini_pos(640),
+  .y_ini_pos(0),
   .reset(rst),
   .next_x(next_x),
   .next_y(next_y),

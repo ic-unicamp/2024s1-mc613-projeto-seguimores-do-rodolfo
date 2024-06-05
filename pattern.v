@@ -1,5 +1,5 @@
 module pattern (
-    input CLOCK_24,
+    input CLOCK_25,
     input [3:0] command_in,
     input [7:0] y_ini_pos,
     input reset,
@@ -7,7 +7,7 @@ module pattern (
     input next_y,
     
     output [3:0] command_out,
-    output [7:0] y_pos,
+    output reg [7:0] y_pos,
     output [3:0] sprite_pattern
 );
 // cada sprite vai ser responsável por verificar se a pessoa pontuou e emitira um sinal booleano
@@ -15,7 +15,7 @@ module pattern (
 // k é a cordenada vertical central do padrão
 reg [27:0] contador = 0;
 
-always @(posedge CLOCK_24) begin
+always @(posedge CLOCK_25) begin
     contador <= contador + 1;
 
     if (contador == 800_000) begin
@@ -23,7 +23,7 @@ always @(posedge CLOCK_24) begin
         if (reset) begin
             y_pos <= y_ini_pos;
         end else begin
-            y_pos <= y_pos - 1;
+            y_pos <= y_pos + 1;
         end
         
         // A verificação se o sprite chegou a fim da tela será feita no top, que tbm mudará o padrão

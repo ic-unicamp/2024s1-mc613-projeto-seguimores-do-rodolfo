@@ -1,5 +1,5 @@
 module pattern (
-    input CLOCK_24,
+    input CLOCK_25,
     input [3:0] command_in,
     input [7:0] y_ini_pos,
     input reset,
@@ -15,7 +15,7 @@ module pattern (
 // k é a cordenada vertical central do padrão
 reg [27:0] contador = 0;
 
-always @(posedge CLOCK_24) begin
+always @(posedge CLOCK_25) begin
     contador <= contador + 1;
 
     if (contador == 800_000) begin

@@ -1,4 +1,4 @@
-module top1(
+module top2(
   input CLOCK_50,
   input [3:0] KEY, // para o reset
 
@@ -18,7 +18,7 @@ wire rst = !KEY[0];
 
 wire [3:0] pattern_out_ptr1;
 wire [7:0] y_pos_ptr1;
-wire [3:0] command_out_ptr1;
+wire [3:0] sprite_ptr1;
 
 wire [7:0] R_in;
 wire [7:0] G_in;
@@ -26,12 +26,12 @@ wire [7:0] B_in;
 
 // Mudar a atribuição de R_in, G_in e B_in para adicionar transparencia -> passar só os bits mais significativos de cor
 
-assign R_in = command_out_ptr1[0] ? 8'b11111111 : 8'b00000000;
-assign G_in = command_out_ptr1[1] || command_out_ptr1[3] ? 8'b11111111 : 8'b00000000;
-assign B_in = command_out_ptr1[2] || command_out_ptr1[3] ? 8'b11111111 : 8'b00000000;
+assign R_in = sprite_ptr1[0] ? 8'b11111111 : 8'b00000000;
+assign G_in = sprite_ptr1[1] || sprite_ptr1[3] ? 8'b11111111 : 8'b00000000;
+assign B_in = sprite_ptr1[2] || sprite_ptr1[3] ? 8'b11111111 : 8'b00000000;
 
 
-patter ptr1(
+pattern ptr1(
   .CLOCK_25(CLOCK_25),
   .command_in(4'b1011),
   .y_ini_pos(640),
@@ -40,7 +40,7 @@ patter ptr1(
   .next_y(next_y),
   .command_out(command_out),
   .y_pos(y_pos_ptr1),
-  .sprite_pattern(pattern_out_ptr1)
+  .sprite_pattern(sprite_ptr1)
 );
 
 pll_vga pll_vga_inst(
@@ -56,9 +56,9 @@ vga vga(
   //.CLOCK_50(CLOCK_50),
   .KEY(KEY),
   .SW(SW),
-  .R_in(Y_out),
-  .G_in(Y_out),
-  .B_in(Y_out),
+  .R_in(R_in),
+  .G_in(G_in),
+  .B_in(B_in),
   //output
   .VGA_VS(VGA_VS),
   .VGA_HS(VGA_HS),

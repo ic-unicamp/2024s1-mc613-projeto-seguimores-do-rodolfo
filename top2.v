@@ -29,7 +29,7 @@ wire rst = !SW[0];
 wire [3:0] comando;
 wire trocar_comando;
 assign trocar_comando = trocar1 || trocar2 || trocar3;
-assign ponto = ponto1; /* || ponto2 || ponto3; */
+assign ponto = ponto1 || ponto2 || ponto3; 
 reg [7:0] score = 0;
 
 always @ (posedge ponto) begin

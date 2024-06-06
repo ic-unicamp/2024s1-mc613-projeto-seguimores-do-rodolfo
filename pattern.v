@@ -53,11 +53,11 @@ always @(posedge CLOCK_25) begin
             // A verificação se o sprite chegou a fim da tela será feita no top, que tbm mudará o padrão
         end
 
-        if (y_pos <= 428 && y_pos >= 480) begin
+        if (y_pos >= 428 && y_pos <= 480) begin
 
             case(TENTOU) 
                 0: begin
-                        if (!KEY != 0) begin
+                        if (!KEY != 0 || !KEY == 0) begin
                             if (!KEY == command_in || !KEY != command_in) begin
                                 ponto <= 1;
                                 TENTOU = 1;

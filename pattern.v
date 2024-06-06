@@ -25,7 +25,7 @@ reg TENTOU = 0;
 
 always @(posedge CLOCK_25) begin
     contador <= contador + 1;
-
+    ponto <= 0;
     if (trocar == 1) begin
         command_in_aux = command_in;
         trocar = 0;
@@ -54,16 +54,17 @@ always @(posedge CLOCK_25) begin
         end
 
         if (y_pos <= 428 && y_pos >= 480) begin
-            //ponto = 0;
+
             case(TENTOU) 
                 0: begin
                         if (!KEY != 0) begin
-                            if (!KEY == command_in) begin
-                                ponto = 1;
+                            if (!KEY == command_in || !KEY != command_in) begin
+                                ponto <= 1;
                                 TENTOU = 1;
                             end
                         end
                     end
+                1: TENTOU = 0;
                 default: begin 
                     TENTOU = 0;
                 end

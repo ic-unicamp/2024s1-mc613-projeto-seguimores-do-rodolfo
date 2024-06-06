@@ -10,8 +10,17 @@ module top2(
   output [7:0] VGA_B,
   output VGA_SYNC_N = 1,
   output VGA_BLANK_N = 1,
-  output VGA_CLK
+  output VGA_CLK,
+  
+  output [6:0] HEX0,
+  output [6:0] HEX1,
+  output [6:0] HEX2,
+  output [6:0] HEX3,
+  output [6:0] HEX4,
+  output [6:0] HEX5
 );
+
+wire [19:0] display;
 
 wire CLOCK_24;
 wire CLOCK_25;
@@ -20,7 +29,12 @@ wire rst = !SW[0];
 wire [3:0] comando;
 wire trocar_comando;
 assign trocar_comando = trocar1 || trocar2 || trocar3;
-assign ponto = ponto1 || ponto2 || ponto3;
+assign ponto = ponto1; /* || ponto2 || ponto3; */
+reg [7:0] score = 0;
+
+always @ (posedge ponto) begin
+  score = score + 1;
+end
 
 wire [3:0] command_out_ptr1;
 wire [7:0] y_pos_ptr1;
@@ -52,6 +66,17 @@ assign B_in = (((next_y > 450) && (next_y <= 458))
                 || (sprite_ptr3[2])) ? 8'b11111111 : 8'b00000000;
 
 // 
+
+placar placar(
+  .display(display),
+  .HEX0(HEX0),
+  .HEX1(HEX1),
+  .HEX2(HEX2),
+  .HEX3(HEX3),
+  .HEX4(HEX4),
+  .HEX5(HEX5)
+);
+
 
 pattern ptr1(
   .CLOCK_25(CLOCK_25),
@@ -133,5 +158,7 @@ vga vga(
   .VGA_SYNC_N(VGA_SYNC_N),
   .VGA_BLANK_N(VGA_BLANK_N)
 );
+
+assign display = score;
 
 endmodule

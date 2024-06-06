@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top2
-Wed Jun  5 17:36:49 2024
+Thu Jun  6 19:04:01 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -11,6 +11,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Jun  5 17:36:49 2024           ;
+; Analysis & Synthesis Status ; Failed - Thu Jun  6 19:04:01 2024           ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name               ; top2                                        ;
 ; Top-level Entity Name       ; top2                                        ;
@@ -160,27 +161,125 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jun  5 17:36:45 2024
+    Info: Processing started: Thu Jun  6 19:03:57 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top2 -c top2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v
-    Info (12023): Found entity 1: top2 File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v
-    Info (12023): Found entity 1: vga File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v
-    Info (12023): Found entity 1: pll_vga File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v Line: 8
-Error (10170): Verilog HDL syntax error at pattern.v(59) near text: "default";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 59
-Error (10170): Verilog HDL syntax error at pattern.v(64) near text: "endcase";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 64
-Info (12021): Found 0 design units, including 0 entities, in source file /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v
+Info (12021): Found 1 design units, including 1 entities, in source file /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v
+    Info (12023): Found entity 1: top2 File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v
+    Info (12023): Found entity 1: vga File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v
+    Info (12023): Found entity 1: pll_vga File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v
+    Info (12023): Found entity 1: pattern File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll_vga.v
-    Info (12023): Found entity 1: pll_vga File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/pll_vga.v Line: 8
+    Info (12023): Found entity 1: pll_vga File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/pll_vga.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll_vga/pll_vga_0002.v
-    Info (12023): Found entity 1: pll_vga_0002 File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/pll_vga/pll_vga_0002.v Line: 2
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 1140 megabytes
-    Error: Processing ended: Wed Jun  5 17:36:49 2024
+    Info (12023): Found entity 1: pll_vga_0002 File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/pll_vga/pll_vga_0002.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at top2.v(23): created implicit net for "ponto" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at top2.v(65): created implicit net for "ponto1" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 65
+Warning (10236): Verilog HDL Implicit Net warning at top2.v(68): created implicit net for "trocar1" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 68
+Warning (10236): Verilog HDL Implicit Net warning at top2.v(79): created implicit net for "ponto2" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 79
+Warning (10236): Verilog HDL Implicit Net warning at top2.v(82): created implicit net for "trocar2" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 82
+Warning (10236): Verilog HDL Implicit Net warning at top2.v(93): created implicit net for "ponto3" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at top2.v(96): created implicit net for "trocar3" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 96
+Warning (10236): Verilog HDL Implicit Net warning at top2.v(102): created implicit net for "fim_de_jogo" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 102
+Info (12127): Elaborating entity "top2" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top2.v(23): object "ponto" assigned a value but never read File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 23
+Info (12128): Elaborating entity "pattern" for hierarchy "pattern:ptr1" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 69
+Warning (10230): Verilog HDL assignment warning at pattern.v(27): truncated value with size 32 to match size of target (28) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 27
+Warning (10230): Verilog HDL assignment warning at pattern.v(50): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 50
+Warning (10034): Output port "command_out" at pattern.v(10) has no driver File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 10
+Info (12128): Elaborating entity "pll_vga" for hierarchy "pll_vga:pll_vga_inst" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 110
+Info (12128): Elaborating entity "pll_vga_0002" for hierarchy "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v Line: 19
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/pll_vga/pll_vga_0002.v Line: 85
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/pll_vga/pll_vga_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/pll_vga/pll_vga_0002.v Line: 85
+    Info (12134): Parameter "fractional_vco_multiplier" = "false"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "output_clock_frequency0" = "25.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 135
+Warning (10036): Verilog HDL or VHDL warning at vga.v(24): object "VGA_CLK_aux" assigned a value but never read File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 24
+Warning (10230): Verilog HDL assignment warning at vga.v(41): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 41
+Warning (10230): Verilog HDL assignment warning at vga.v(43): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 43
+Warning (10230): Verilog HDL assignment warning at vga.v(48): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 48
+Warning (10230): Verilog HDL assignment warning at vga.v(50): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 50
+Warning (10230): Verilog HDL assignment warning at vga.v(66): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 66
+Warning (10230): Verilog HDL assignment warning at vga.v(67): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 67
+Warning (10230): Verilog HDL assignment warning at vga.v(73): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 73
+Warning (10230): Verilog HDL assignment warning at vga.v(74): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 74
+Warning (10230): Verilog HDL assignment warning at vga.v(75): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 75
+Error (12006): Node instance "lista" instantiates undefined entity "gerenciador_de_patterns". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2.v Line: 104
+Info (144001): Generated suppressed messages file /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/output_files/top2.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 23 warnings
+    Error: Peak virtual memory: 1143 megabytes
+    Error: Processing ended: Thu Jun  6 19:04:01 2024
     Error: Elapsed time: 00:00:04
     Error: Total CPU time (on all processors): 00:00:13
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/ec2022/ra247348/5S/MC613/Projeto/2024s1-mc613-projeto-seguimores-do-rodolfo/top2/output_files/top2.map.smsg.
 
 

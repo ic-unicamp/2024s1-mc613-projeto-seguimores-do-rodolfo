@@ -17,12 +17,20 @@ wire CLOCK_24;
 wire CLOCK_25;
 wire rst = !SW[0];
 
+wire [3:0] comando;
+wire trocar_comando;
+assign trocar_comando = trocar1 || trocar2 || trocar3;
+assign ponto = ponto1 || ponto2 || ponto3;
+
 wire [3:0] command_out_ptr1;
 wire [7:0] y_pos_ptr1;
 wire [3:0] sprite_ptr1;
 wire [3:0] command_out_ptr2;
 wire [7:0] y_pos_ptr2;
 wire [3:0] sprite_ptr2;
+wire [3:0] command_out_ptr3;
+wire [7:0] y_pos_ptr3;
+wire [3:0] sprite_ptr3;
 
 wire [7:0] R_in;
 wire [7:0] G_in;
@@ -30,35 +38,69 @@ wire [7:0] B_in;
 
 // Mudar a atribuição de R_in, G_in e B_in para adicionar transparencia -> passar só os bits mais significativos de cor
 
-assign R_in = (((next_y > 450) && (next_y <= 458)) || (sprite_ptr1[0] || sprite_ptr1[3]) || (sprite_ptr2[0] || sprite_ptr2[3])) ? 8'b11111111 : 8'b00000000;
-assign G_in = (((next_y > 450) && (next_y <= 458)) || (sprite_ptr1[1] || sprite_ptr1[3]) || (sprite_ptr2[1] || sprite_ptr2[3])) ? 8'b11111111 : 8'b00000000;
-assign B_in = (((next_y > 450) && (next_y <= 458)) || (sprite_ptr1[2]) || (sprite_ptr2[2])) ? 8'b11111111 : 8'b00000000;
+assign R_in = (((next_y > 450) && (next_y <= 458)) 
+                || (sprite_ptr1[0] || sprite_ptr1[3]) 
+                || (sprite_ptr2[0] || sprite_ptr2[3])
+                || (sprite_ptr3[0] || sprite_ptr3[3])) ? 8'b11111111 : 8'b00000000;
+assign G_in = (((next_y > 450) && (next_y <= 458)) 
+                || (sprite_ptr1[1] || sprite_ptr1[3]) 
+                || (sprite_ptr2[1] || sprite_ptr2[3])
+                || (sprite_ptr3[1] || sprite_ptr3[3])) ? 8'b11111111 : 8'b00000000;
+assign B_in = (((next_y > 450) && (next_y <= 458)) 
+                || (sprite_ptr1[2]) 
+                || (sprite_ptr2[2])
+                || (sprite_ptr3[2])) ? 8'b11111111 : 8'b00000000;
 
-
+// 
 
 pattern ptr1(
   .CLOCK_25(CLOCK_25),
   .KEY(KEY),
-  .command_in(4'b0100),
+  .command_in(comando),
   .y_ini_pos(0),
   .reset(rst),
   .next_x(next_x),
   .next_y(next_y),
   .command_out(command_out_ptr2),
+  .ponto(ponto1),
   .y_pos(y_pos_ptr1),
-  .sprite_pattern(sprite_ptr1)
+  .sprite_pattern(sprite_ptr1),
+  .trocar(trocar1)
 );
 
 pattern ptr2(
   .CLOCK_25(CLOCK_25),
-  .command_in(4'b1010),
-  .y_ini_pos(248),
+  .command_in(comando),
+  .y_ini_pos(64),
   .reset(rst),
   .next_x(next_x),
   .next_y(next_y),
   .command_out(command_out_ptr2),
+  .ponto(ponto2),
   .y_pos(y_pos_ptr2),
-  .sprite_pattern(sprite_ptr2)
+  .sprite_pattern(sprite_ptr2),
+  .trocar(trocar2)
+);
+
+pattern ptr3(
+  .CLOCK_25(CLOCK_25),
+  .command_in(comando),
+  .y_ini_pos(128),
+  .reset(rst),
+  .next_x(next_x),
+  .next_y(next_y),
+  .command_out(command_out_ptr3),
+  .ponto(ponto3),
+  .y_pos(y_pos_ptr3),
+  .sprite_pattern(sprite_ptr3),
+  .trocar(trocar3)
+);
+
+gerenciador_de_patterns lista(
+  .trocar_comando(trocar_comando),
+  .fim_da_lista(10),
+  .fim_de_jogo(fim_de_jogo),
+  .prox_comando(comando)
 );
 
 pll_vga pll_vga_inst(

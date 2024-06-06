@@ -34,7 +34,7 @@ reg [9:0] nxt_y;
 end*/
 always @ (posedge VGA_CLK) begin
 
-  if (!KEY[0]) begin
+  if (!SW[0]) begin
         x = 0;
         y = 0;
     end else begin

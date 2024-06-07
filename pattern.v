@@ -65,7 +65,7 @@ always @(posedge CLOCK_25) begin
             case(TENTOU) 
                 0: begin
                         if (command_player != 0) begin
-                            if (command_player == command_in) begin
+                            if (command_player == command_in_aux) begin
                                 ponto = 1;
                                 TENTOU = 1;
                             end

@@ -29,8 +29,8 @@ wire rst = !SW[0];
 wire [3:0] comando;
 
 wire trocar_comando;
-assign trocar_comando = /* trocar1 || */ trocar2 || /* trocar3 || */ trocar4 || /* trocar5 || */ trocar6 || /* trocar7 || */ trocar8;
-assign ponto = /* ponto1 || */ ponto2 || /* ponto3 || */ ponto4 || /* ponto5 || */ ponto6 || /* ponto7 || */ ponto8; 
+assign trocar_comando = trocar1 || trocar2 || trocar3 || trocar4 || trocar5 || trocar6 || trocar7 || trocar8;
+assign ponto = ponto1 || ponto2 || ponto3 || ponto4 || ponto5 || ponto6 || ponto7 || ponto8; 
 reg [7:0] score = 0;
 
 
@@ -70,31 +70,31 @@ wire [7:0] B_in;
 // Mudar a atribuição de R_in, G_in e B_in para adicionar transparencia -> passar só os bits mais significativos de cor
 
 assign R_in = (((next_y > 450) && (next_y <= 458)) 
-                /* || (sprite_ptr1[0] || sprite_ptr1[3]) */ 
+                || (sprite_ptr1[0] || sprite_ptr1[3]) 
                 || (sprite_ptr2[0] || sprite_ptr2[3])
-                /* || (sprite_ptr3[0] || sprite_ptr3[3]) */
+                || (sprite_ptr3[0] || sprite_ptr3[3])
                 || (sprite_ptr4[0] || sprite_ptr4[3])
-                /* || (sprite_ptr5[0] || sprite_ptr5[3]) */
+                || (sprite_ptr5[0] || sprite_ptr5[3])
                 || (sprite_ptr6[0] || sprite_ptr6[3])
-                /* || (sprite_ptr7[0] || sprite_ptr7[3]) */
+                || (sprite_ptr7[0] || sprite_ptr7[3])
                 || (sprite_ptr8[0] || sprite_ptr8[3])) ? 8'b11111111 : 8'b00000000;
 assign G_in = (((next_y > 450) && (next_y <= 458)) 
-                /* || (sprite_ptr1[1] || sprite_ptr1[3])  */
+                || (sprite_ptr1[1] || sprite_ptr1[3]) 
                 || (sprite_ptr2[1] || sprite_ptr2[3])
-                /* || (sprite_ptr3[1] || sprite_ptr3[3]) */
+                || (sprite_ptr3[1] || sprite_ptr3[3])
                 || (sprite_ptr4[1] || sprite_ptr4[3])
-                /* || (sprite_ptr5[1] || sprite_ptr5[3]) */
+                || (sprite_ptr5[1] || sprite_ptr5[3])
                 || (sprite_ptr6[1] || sprite_ptr6[3])
-                /* || (sprite_ptr7[1] || sprite_ptr7[3]) */
+                || (sprite_ptr7[1] || sprite_ptr7[3])
                 || (sprite_ptr8[1] || sprite_ptr8[3])) ? 8'b11111111 : 8'b00000000;
 assign B_in = (((next_y > 450) && (next_y <= 458)) 
-                /* || (sprite_ptr1[2]) */ 
+                || (sprite_ptr1[2]) 
                 || (sprite_ptr2[2])
-                /* || (sprite_ptr3[2]) */
+                || (sprite_ptr3[2])
                 || (sprite_ptr4[2])
-                /* || (sprite_ptr5[2]) */
+                || (sprite_ptr5[2])
                 || (sprite_ptr6[2])
-                /* || (sprite_ptr7[2]) */
+                || (sprite_ptr7[2])
                 || (sprite_ptr8[2])) ? 8'b11111111 : 8'b00000000;
 
 // 
@@ -110,11 +110,11 @@ placar placar(
 );
 
 
-/* pattern ptr1(
+pattern ptr1(
   .CLOCK_25(CLOCK_25),
   .KEY(KEY),
   .command_in(comando),
-  //.command_player(KEY),
+  //.command_player({!KEY[3], !KEY[2], !KEY[1], !KEY[0]}),
   .y_ini_pos(0),
   .reset(rst),
   .next_x(next_x),
@@ -124,7 +124,7 @@ placar placar(
   .y_pos(y_pos_ptr1),
   .sprite_pattern(sprite_ptr1),
   .trocar(trocar1)
-); */
+);
 
 pattern ptr2(
   .CLOCK_25(CLOCK_25),
@@ -142,7 +142,7 @@ pattern ptr2(
   .trocar(trocar2)
 );
 
-/* pattern ptr3(
+pattern ptr3(
   .CLOCK_25(CLOCK_25),
   .command_in(comando),
   .KEY(KEY),
@@ -156,7 +156,7 @@ pattern ptr2(
   .y_pos(y_pos_ptr3),
   .sprite_pattern(sprite_ptr3),
   .trocar(trocar3)
-); */
+);
 
 pattern ptr4(
   .CLOCK_25(CLOCK_25),
@@ -174,7 +174,7 @@ pattern ptr4(
   .trocar(trocar4)
 );
 
-/* pattern ptr5(
+pattern ptr5(
   .CLOCK_25(CLOCK_25),
   .command_in(comando),
   .KEY(KEY),
@@ -188,7 +188,7 @@ pattern ptr4(
   .y_pos(y_pos_ptr5),
   .sprite_pattern(sprite_ptr5),
   .trocar(trocar5)
-); */
+);
 
 pattern ptr6(
   .CLOCK_25(CLOCK_25),
@@ -206,7 +206,7 @@ pattern ptr6(
   .trocar(trocar6)
 );
 
-/* pattern ptr7(
+pattern ptr7(
   .CLOCK_25(CLOCK_25),
   .command_in(comando),
   .KEY(KEY),
@@ -220,7 +220,7 @@ pattern ptr6(
   .y_pos(y_pos_ptr7),
   .sprite_pattern(sprite_ptr7),
   .trocar(trocar7)
-); */
+);
 
 pattern ptr8(
   .CLOCK_25(CLOCK_25),
@@ -241,7 +241,7 @@ pattern ptr8(
 gerenciador_de_patterns lista(
   .trocar_comando(trocar_comando),
   .rst(rst),
-  .fim_da_lista(51),
+  .fim_da_lista(203),
   .fim_de_jogo(fim_de_jogo),
   .prox_comando(comando)
 );

@@ -15,9 +15,9 @@ assign lista_de_comandos[3] = 1;
 assign lista_de_comandos[4] = 1;
 assign lista_de_comandos[5] = 1;
 assign lista_de_comandos[6] = 1;
-assign lista_de_comandos[7] = 1;
-assign lista_de_comandos[8] = 1;
-assign lista_de_comandos[9] = 1;
+assign lista_de_comandos[7] = 7;
+assign lista_de_comandos[8] = 7;
+assign lista_de_comandos[9] = 7;
 
 reg [1:0] estado_do_jogo; //0 inicio; 1 meio; 2 fim
 

@@ -2,6 +2,7 @@ module pattern (
     input CLOCK_25,
     input KEY,
     input [3:0] command_in,
+    input [3:0] command_player,
     input [7:0] y_ini_pos,
     input reset,
     input [9:0] next_x,
@@ -57,14 +58,16 @@ always @(posedge CLOCK_25) begin
 
             case(TENTOU) 
                 0: begin
-                        if (!KEY != 0 || !KEY == 0) begin
-                            if (!KEY == command_in || !KEY != command_in) begin
+                        if (command_player != 0) begin
+                            if (command_player == command_in) begin
                                 ponto <= 1;
                                 TENTOU = 1;
                             end
                         end
                     end
-                1: TENTOU = 0;
+                1: begin
+                    if (y_pos <= 40) TENTOU = 0;
+                end
                 default: begin 
                     TENTOU = 0;
                 end

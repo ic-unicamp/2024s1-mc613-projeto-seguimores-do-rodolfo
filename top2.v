@@ -82,6 +82,7 @@ pattern ptr1(
   .CLOCK_25(CLOCK_25),
   .KEY(KEY),
   .command_in(comando),
+  .command_player({!KEY[0], !KEY[1], !KEY[2], !KEY[3]}),
   .y_ini_pos(0),
   .reset(rst),
   .next_x(next_x),
@@ -96,6 +97,7 @@ pattern ptr1(
 pattern ptr2(
   .CLOCK_25(CLOCK_25),
   .command_in(comando),
+  .command_player({!KEY[0], !KEY[1], !KEY[2], !KEY[3]}),
   .y_ini_pos(64),
   .reset(rst),
   .next_x(next_x),
@@ -110,6 +112,7 @@ pattern ptr2(
 pattern ptr3(
   .CLOCK_25(CLOCK_25),
   .command_in(comando),
+  .command_player({!KEY[0], !KEY[1], !KEY[2], !KEY[3]}),
   .y_ini_pos(128),
   .reset(rst),
   .next_x(next_x),

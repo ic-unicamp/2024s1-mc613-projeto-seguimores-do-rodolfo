@@ -18,12 +18,20 @@
 #
 # Quartus Prime
 # Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+<<<<<<< HEAD
 # Date created = 15:08:07  June 05, 2024
+=======
+# Date created = 14:42:57  June 05, 2024
+>>>>>>> patterns-sprites
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "17.1"
+<<<<<<< HEAD
 DATE = "15:08:07  June 05, 2024"
+=======
+DATE = "14:42:57  June 05, 2024"
+>>>>>>> patterns-sprites
 
 # Revisions
 

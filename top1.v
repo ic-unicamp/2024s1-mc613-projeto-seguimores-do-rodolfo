@@ -1,7 +1,6 @@
 module top1(
   input CLOCK_50,
-  input [3:0] KEY, // para o reset
-
+  input [3:0] SW, // para o reset
   // Pinos de propósito geral
   inout [35:0] GPIO_1,
 
@@ -18,13 +17,14 @@ module top1(
 
 wire CLOCK_24;
 wire CLOCK_25;
-wire rst = !KEY[0];
+
 
 wire [3:0] pattern_out_ptr1;
 wire [7:0] y_pos_ptr1;
 wire [3:0] command_out_ptr1;
 
 
+wire rst = !SW[0];
 PLL clk_24(
   .refclk(CLOCK_50),
   .rst(rst),
@@ -59,20 +59,27 @@ patter ptr1(
   wire HREF;       
   wire PCLK;
   wire e_pix;
-  wire verde;
-  wire verde2;
+
   wire [7:0] D;
   wire [18:0] contador_C;
+
   wire [7:0] Y_in; 
   wire [7:0] Y_2; 
+
   wire [7:0]R_out; 
   wire [7:0]G_out;
   wire [7:0]B_out;
+
   wire [7:0]R_out2; 
   wire [7:0]G_out2;
   wire [7:0]B_out2;
+
   wire [7:0] Y_verde;
   wire [7:0] Y_verde2;
+
+  wire verde;
+  wire verde2;
+
   reg [7:0] Y_enter; 
   wire [7:0] Cb; 
   wire [7:0] Cr; 
@@ -106,18 +113,19 @@ patter ptr1(
   assign GPIO_1[35:32] = 4'bz;
   assign GPIO_1[27:26] = 2'bz;
 
-wire [9:0] next_x;
-wire [9:0] next_y;
-wire [7:0] Y_out;
-wire [19:0] contador_V;
+
+  wire [3:0] verde_detectado;
+  wire [9:0] next_x;
+  wire [9:0] next_y;
+  wire [7:0] Y_out;
+  wire [19:0] contador_V;
 
 assign contador_V = next_y * 10'd640 + next_x;
-
 
 camera camera(
   // inputs
   .CLOCK_24(CLOCK_24),
-  .KEY(KEY),
+  .KEY(SW),
   .D(D),
   .RESET(RESET),
   //.SDIOC(SDIOC),
@@ -162,22 +170,36 @@ detectorVerde dec_verde(
   .Y_out(Y_verde2)
 );
 
-reg c; 
+reg c, verde_aux; 
 reg [7:0] R_aux, G_aux, B_aux;
 always @(posedge PCLK) begin //Ajustado o conteúdo gravado na RAM
   c = !c; 
   if(c) begin 
     Y_enter = Y_verde;
+    verde_aux = verde; 
     R_aux = R_out;
     G_aux = G_out;
     B_aux = B_out;
   end else begin 
     Y_enter = Y_verde2;
+    verde_aux = verde2; 
     R_aux = R_out2;
     G_aux = G_out2;
     B_aux = B_out2;
   end
 end 
+
+colorTracker color_tracker(
+    .clk(CLOCK_24),
+    .SW(SW),
+    .R(R_aux),
+    .G(G_aux),
+    .B(B_aux),
+    .verde(verde_aux),
+    .x(next_x), 
+    .y(next_y), 
+    .verde_detectado(verde_detectado)
+);
 
 framebuffer framebuffer(
   .CLOCK_25(CLOCK_25),
@@ -194,8 +216,7 @@ vga vga(
   .VGA_CLK(VGA_CLK),
   .CLOCK_25(CLOCK_25),
   //.CLOCK_50(CLOCK_50),
-  .KEY(KEY),
-  .SW(SW),
+  .KEY(SW),
   .R_in(Y_out),
   .G_in(Y_out),
   .B_in(Y_out),

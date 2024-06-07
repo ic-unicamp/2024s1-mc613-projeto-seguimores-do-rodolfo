@@ -14,24 +14,38 @@ module detectorVerde(
 );
 
 // Coeficientes convertidos para ponto fixo com precisão de 8 bits
-parameter COEF1 = 8'd142; // Aproximação de 1.402 * 2^8
+/*parameter COEF1 = 8'd142; // Aproximação de 1.402 * 2^8
 parameter COEF2 = 8'd35;  // Aproximação de 0.34414 * 2^8
 parameter COEF3 = 8'd73;  // Aproximação de 0.71414 * 2^8
-parameter COEF4 = 8'd180; // Aproximação de 1.772 * 2^8
+parameter COEF4 = 8'd180; // Aproximação de 1.772 * 2^8*/
 
+
+
+reg signed [15:0] Y_signed, Cb_signed, Cr_signed,R_signed,G_signed,B_signed;
 
 always @(posedge PCLK) begin 
     if(e_pix) begin 
-        R_out = (Y + ((COEF1 * (Cr - 8'd128)) >> 8)) & 8'hFF;
 
-        G_out = ((Y - ((COEF2 * (Cb - 8'd128)) >> 8)) - ((COEF3 * (Cr - 8'd128)) >> 8)) & 8'hFF;
+        Y_signed = Y;
+        Cb_signed = Cb - 128;
+        Cr_signed = Cr - 128;
+
+        // R = Y + 1.402 * Cr
+        R_signed = Y_signed + ((1436 * Cr_signed) >>> 10); // 1.402 * 1024 = 1436
+        // G = Y - 0.34414 * Cb - 0.71414 * Cr
+        G_signed = Y_signed - ((352 * Cb_signed) >>> 10) - ((730 * Cr_signed) >>> 10); // 0.34414 * 1024 = 352, 0.71414 * 1024 = 730
+        // B = Y + 1.772 * Cb
+        B_signed = Y_signed + ((1815 * Cb_signed) >>> 10); // 1.772 * 1024 = 1815
         
-        B_out = (Y + ((COEF4 * (Cb - 8'd128)) >> 8)) & 8'hFF;
+        // Results to 8-bit range
+        R_out = (R_signed[7:0]);
+        G_out = (G_signed[7:0]);
+        B_out = (B_signed[7:0]);
 
-        if((G_out - R_out) > 150 && (G_out - B_out) > 150 && (G_out > 99 && G_out < 256)) begin
+        if((G_out - R_out > 70) && (G_out - B_out > 70)) begin
             verde <= 1;
-            Y_out = 8'b0;
-            //Y_out ={2'b01, Y[7:2]};
+            //Y_out = 8'b0;
+            Y_out ={2'b11, Y[7:2]};
         end else begin
             verde <= 0; 
             Y_out = Y;

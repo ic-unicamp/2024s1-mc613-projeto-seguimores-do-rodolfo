@@ -7,9 +7,9 @@ module detectorVerde(
     input signed [7:0] Cr,     // Byte Y output   
 
     output reg verde, 
-    output reg [15:0]R_out,
-    output reg [15:0]G_out,
-    output reg [15:0]B_out,
+    output reg [7:0]R_out,
+    output reg [7:0]G_out,
+    output reg [7:0]B_out,
     output reg [7:0]Y_out
 );
 
@@ -22,28 +22,21 @@ parameter COEF4 = 8'd180; // Aproximação de 1.772 * 2^8
 
 always @(posedge PCLK) begin 
     if(e_pix) begin 
-        R_out = (Y + ((COEF1 * (Cr - 8'd128)) >> 8));
+        R_out = (Y + ((COEF1 * (Cr - 8'd128)) >> 8)) & 8'hFF;
 
-        G_out = ((Y - ((COEF2 * (Cb - 8'd128)) >> 8)) - ((COEF3 * (Cr - 8'd128)) >> 8));
+        G_out = ((Y - ((COEF2 * (Cb - 8'd128)) >> 8)) - ((COEF3 * (Cr - 8'd128)) >> 8)) & 8'hFF;
         
-        B_out = (Y + ((COEF4 * (Cb - 8'd128)) >> 8));
+        B_out = (Y + ((COEF4 * (Cb - 8'd128)) >> 8)) & 8'hFF;
 
-        if(G_out > 99 && G_out < 256 ) begin
+        if((G_out - R_out) > 150 && (G_out - B_out) > 150 && (G_out > 99 && G_out < 256)) begin
             verde <= 1;
-            Y_out ={2'b01, Y[7:2]};
+            Y_out = 8'b0;
+            //Y_out ={2'b01, Y[7:2]};
         end else begin
             verde <= 0; 
             Y_out = Y;
         end 
     end else verde <= 0; 
-    
-    /*if(e_pix) begin 
-        if(Cb[0] && Cr[0]) begin 
-            verde <= 1;
-            Y_out = 8'b0;
-            //Y_out ={2'b01, Y[7:2]};
-        end else Y_out = Y; 
-    end else verde <=0;*/ 
 end
 =======
     input PCLK,                // Pixel clock

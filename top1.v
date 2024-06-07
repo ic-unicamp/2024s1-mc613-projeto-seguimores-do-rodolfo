@@ -65,12 +65,12 @@ patter ptr1(
   wire [18:0] contador_C;
   wire [7:0] Y_in; 
   wire [7:0] Y_2; 
-  wire [15:0]R_out; 
-  wire [15:0]G_out;
-  wire [15:0]B_out;
-  wire [15:0]R_out2; 
-  wire [15:0]G_out2;
-  wire [15:0]B_out2;
+  wire [7:0]R_out; 
+  wire [7:0]G_out;
+  wire [7:0]B_out;
+  wire [7:0]R_out2; 
+  wire [7:0]G_out2;
+  wire [7:0]B_out2;
   wire [7:0] Y_verde;
   wire [7:0] Y_verde2;
   reg [7:0] Y_enter; 
@@ -163,7 +163,7 @@ detectorVerde dec_verde(
 );
 
 reg c; 
-reg [15:0] R_aux, G_aux, B_aux;
+reg [7:0] R_aux, G_aux, B_aux;
 always @(posedge PCLK) begin //Ajustado o conteúdo gravado na RAM
   c = !c; 
   if(c) begin 

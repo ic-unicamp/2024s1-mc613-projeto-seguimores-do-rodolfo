@@ -2,7 +2,6 @@ module vga(
   output VGA_CLK,
   //input CLOCK_50
   input CLOCK_25,
-  input [3:0] KEY,
   input [9:0] SW,
   input [7:0] R_in,
   input [7:0] G_in,
@@ -28,6 +27,11 @@ reg [9:0] y;
 
 reg [9:0] nxt_x;
 reg [9:0] nxt_y;
+
+parameter WIDTH = 640;
+parameter HEIGHT = 480;
+parameter REGION_WIDTH = WIDTH / 4;
+
 
 /*always @(posedge CLOCK_50) begin
   VGA_CLK_aux = ~VGA_CLK_aux;
@@ -70,9 +74,9 @@ assign VGA_BLANK_N = 1;
 assign VGA_SYNC_N = 1;
 assign next_x = nxt_x;
 assign next_y = nxt_y;
-assign VGA_R = (ativo)  ? R_in:0;
-assign VGA_G = (ativo)  ? G_in:0;
-assign VGA_B = (ativo)  ? B_in:0;
+assign VGA_R = (ativo)  ? R_in : 0;
+assign VGA_G = (ativo)  ? G_in : 0;
+assign VGA_B = (ativo)  ? B_in : 0;
 
 
 endmodule

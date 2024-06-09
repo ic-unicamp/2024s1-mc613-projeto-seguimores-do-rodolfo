@@ -1,16 +1,15 @@
 module detectorVerde(
-<<<<<<< HEAD
     input PCLK,                     // Pixel clock
     input e_pix,                    // Enable read two pixels
     input [7:0] Y,                  // Byte Y output    
     input signed [7:0] Cb,     // Byte Y output  
     input signed [7:0] Cr,     // Byte Y output   
 
-    output reg verde, 
+    output reg eh_verde, 
     output reg [7:0]R_out,
     output reg [7:0]G_out,
     output reg [7:0]B_out,
-    output reg [7:0]Y_out
+    output reg [7:0]Y_dec
 );
 
 // Coeficientes convertidos para ponto fixo com precisão de 8 bits
@@ -22,6 +21,8 @@ parameter COEF4 = 8'd180; // Aproximação de 1.772 * 2^8*/
 
 
 reg signed [15:0] Y_signed, Cb_signed, Cr_signed,R_signed,G_signed,B_signed;
+
+//reg signed [7:0] G_max, G_min = 8'd130, R_max= 8'd90, R_min, B_max= 8'd180, B_min; 
 
 always @(posedge PCLK) begin 
     if(e_pix) begin 
@@ -42,36 +43,21 @@ always @(posedge PCLK) begin
         G_out = (G_signed[7:0]);
         B_out = (B_signed[7:0]);
 
-        if((G_out - R_out > 70) && (G_out - B_out > 70)) begin
-            verde <= 1;
+
+        /*(G_out - R_out) > 8'd80
+        (B_out - G_out) < 8'd90
+        B_out < 8'd247
+        R_out < 8'd75*/
+        //G_out > 8'd110 && R_out < 8'd75 && B_out < 8'd247 && (B_out - G_out) < 8'd90
+        if(Y > 8'd90 && Y < 8'd115 && Cr > 8'd125 && Cr <8'd160 && G_out > 8'd75 && R_out <8'd70 && B_out < 8'd220) begin
+            eh_verde <= 1;
             //Y_out = 8'b0;
-            Y_out ={2'b11, Y[7:2]};
+            Y_dec = {2'b11, Y[7:2]};
+            //Y_dec ={2'b11, Y[7:2]};
         end else begin
-            verde <= 0; 
-            Y_out = Y;
+            eh_verde <= 0; 
+            Y_dec ={2'b00, Y[7:2]};
         end 
-    end else verde <= 0; 
+    end else eh_verde <= 0; 
 end
-=======
-    input PCLK,                // Pixel clock
-    input e_pix,               // Enable read two pixels
-    input [7:0] Y,             // Byte Y input    
-    input signed [7:0] Cb,     // Byte Y input  
-    input [7:0] Cr,            // Byte Y input  
-
-    output reg verde,           //Flag de deteccao da cor verde
-    output reg [7:0] Y_out      //Luminancia alterada
-);
-
-always @(posedge PCLK) begin
-    verde <= 0; 
-    if(e_pix) begin
-    //Temos todas as informacoes do pixel 
-        if(Cb[0] && Cr[0]) begin
-            verde <= 1; 
-            Y_out = {2'b01, Y[7:2]}; //Indicador de que o pixel eh de um objeto da cor verde
-        end else Y_out = Y; 
-    end
-end 
->>>>>>> patterns-sprites
 endmodule

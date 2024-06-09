@@ -1,6 +1,6 @@
 module top1(
   input CLOCK_50,
-  input [3:0] SW, // para o reset
+  input [9:0] SW, // para o reset
   // Pinos de propósito geral
   inout [35:0] GPIO_1,
 
@@ -15,13 +15,12 @@ module top1(
   
 );
 
-wire CLOCK_24;
-wire CLOCK_25;
+wire CLOCK_24, CLOCK_25;
 
 
-wire [3:0] pattern_out_ptr1;
+/*wire [3:0] pattern_out_ptr1;
 wire [7:0] y_pos_ptr1;
-wire [3:0] command_out_ptr1;
+wire [3:0] command_out_ptr1;*/
 
 
 wire rst = !SW[0];
@@ -37,15 +36,15 @@ pll_vga pll_vga_inst(
   .outclk_0(CLOCK_25)
 );
 
-patter ptr1(
-  .CLOCK_24(CLOCK_24),
+/*pattern ptr1(
+  .CLOCK_25(CLOCK_24),
   .command_in(4'b1011),
   .y_ini_pos(640),
   .reset(rst),
   .command_out(command_out),
   .y_pos(y_pos_ptr1),
   .sprite_pattern(pattern_out_ptr1)
-);
+);*/
 
 /* assign GPIO_1[31] = CLOCK_24; */
 
@@ -63,26 +62,20 @@ patter ptr1(
   wire [7:0] D;
   wire [18:0] contador_C;
 
-  wire [7:0] Y_in; 
-  wire [7:0] Y_2; 
+  wire [7:0] Y_in, Y_2; 
 
-  wire [7:0]R_out; 
-  wire [7:0]G_out;
-  wire [7:0]B_out;
+  wire [7:0]R_out, G_out, B_out; 
 
-  wire [7:0]R_out2; 
-  wire [7:0]G_out2;
-  wire [7:0]B_out2;
+  wire [7:0]R_out2, G_out2, B_out2; 
 
-  wire [7:0] Y_verde;
-  wire [7:0] Y_verde2;
+  wire [7:0] Y_verde, Y_verde2;
 
-  wire verde;
-  wire verde2;
+  wire verde, verde2;
+
+  wire red_flag, green_flag, yellow_flag, blue_flag;
 
   reg [7:0] Y_enter; 
-  wire [7:0] Cb; 
-  wire [7:0] Cr; 
+  wire [7:0] Cb, Cr; 
   wire enable_d; 
 
   //assign GPIO_1[26] = SDIOC;
@@ -113,12 +106,14 @@ patter ptr1(
   assign GPIO_1[35:32] = 4'bz;
   assign GPIO_1[27:26] = 2'bz;
 
+  wire [9:0] next_x, next_y;
 
-  wire [3:0] verde_detectado;
-  wire [9:0] next_x;
-  wire [9:0] next_y;
   wire [7:0] Y_out;
   wire [19:0] contador_V;
+
+  parameter WIDTH = 640;
+  parameter HEIGHT = 480;
+  parameter REGION_WIDTH = WIDTH / 4;
 
 assign contador_V = next_y * 10'd640 + next_x;
 
@@ -153,8 +148,8 @@ detectorVerde dec(
   .R_out(R_out), 
   .G_out(G_out),
   .B_out(B_out),
-  .verde(verde), 
-  .Y_out(Y_verde)
+  .eh_verde(verde), 
+  .Y_dec(Y_verde)
 );
 
 detectorVerde dec_verde(
@@ -166,8 +161,8 @@ detectorVerde dec_verde(
   .R_out(R_out2), 
   .G_out(G_out2),
   .B_out(B_out2),
-  .verde(verde2), 
-  .Y_out(Y_verde2)
+  .eh_verde(verde2), 
+  .Y_dec(Y_verde2)
 );
 
 reg c, verde_aux; 
@@ -188,17 +183,61 @@ always @(posedge PCLK) begin //Ajustado o conteúdo gravado na RAM
     B_aux = B_out2;
   end
 end 
-
-colorTracker color_tracker(
+wire reg0,reg1, reg2, reg3;
+colorTracker red_tracker(
     .clk(CLOCK_24),
     .SW(SW),
     .R(R_aux),
     .G(G_aux),
     .B(B_aux),
-    .verde(verde_aux),
+    .region(0),
+    .vga_section(reg0),
+    .eh_verde(verde_aux),
     .x(next_x), 
     .y(next_y), 
-    .verde_detectado(verde_detectado)
+    .regiao_detectada(red_flag)
+);
+
+colorTracker green_tracker(
+    .clk(CLOCK_24),
+    .SW(SW),
+    .R(R_aux),
+    .G(G_aux),
+    .B(B_aux),
+    .region(1),
+    .vga_section(reg1),
+    .eh_verde(verde_aux),
+    .x(next_x), 
+    .y(next_y), 
+    .regiao_detectada(green_flag)
+);
+
+colorTracker yellow_tracker(
+    .clk(CLOCK_24),
+    .SW(SW),
+    .R(R_aux),
+    .G(G_aux),
+    .B(B_aux),
+    .region(2),
+    .vga_section(reg2),
+    .eh_verde(verde_aux),
+    .x(next_x), 
+    .y(next_y), 
+    .regiao_detectada(yellow_flag)
+);
+
+colorTracker blue_tracker(
+    .clk(CLOCK_24),
+    .SW(SW),
+    .R(R_aux),
+    .G(G_aux),
+    .B(B_aux),
+    .region(3),
+    .vga_section(reg3),
+    .eh_verde(verde_aux),
+    .x(next_x), 
+    .y(next_y), 
+    .regiao_detectada(blue_flag)
 );
 
 framebuffer framebuffer(
@@ -211,12 +250,19 @@ framebuffer framebuffer(
   .Y_out(Y_out)
 );
 
+/*wire [7:0] R_in, B_in, G_in;
+
+
+assign R_in = (red_flag || yellow_flag) ? {2'b11, Y_out[7:2]}:{2'b00, Y_out[7:2]}; 
+assign G_in = (green_flag || yellow_flag) ? {2'b11, Y_out[7:2]}:{2'b00, Y_out[7:2]}; 
+assign B_in = (blue_flag) ? {2'b11, Y_out[7:2]}:{2'b00, Y_out[7:2]}; */
+
 vga vga(
   //input
   .VGA_CLK(VGA_CLK),
   .CLOCK_25(CLOCK_25),
   //.CLOCK_50(CLOCK_50),
-  .KEY(SW),
+  .SW(SW),
   .R_in(Y_out),
   .G_in(Y_out),
   .B_in(Y_out),

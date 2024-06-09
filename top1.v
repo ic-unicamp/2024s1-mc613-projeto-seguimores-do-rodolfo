@@ -183,15 +183,15 @@ always @(posedge PCLK) begin //Ajustado o conteúdo gravado na RAM
     B_aux = B_out2;
   end
 end 
-wire reg0,reg1, reg2, reg3;
+
 colorTracker red_tracker(
     .clk(CLOCK_24),
     .SW(SW),
     .R(R_aux),
     .G(G_aux),
     .B(B_aux),
-    .region(0),
-    .vga_section(reg0),
+    .reg_min(0),
+    .reg_max(10'd161),
     .eh_verde(verde_aux),
     .x(next_x), 
     .y(next_y), 
@@ -204,8 +204,8 @@ colorTracker green_tracker(
     .R(R_aux),
     .G(G_aux),
     .B(B_aux),
-    .region(1),
-    .vga_section(reg1),
+    .reg_min(10'd160),
+    .reg_max(10'd321),
     .eh_verde(verde_aux),
     .x(next_x), 
     .y(next_y), 
@@ -218,8 +218,8 @@ colorTracker yellow_tracker(
     .R(R_aux),
     .G(G_aux),
     .B(B_aux),
-    .region(2),
-    .vga_section(reg2),
+    .reg_min(10'd320),
+    .reg_max(10'd481),
     .eh_verde(verde_aux),
     .x(next_x), 
     .y(next_y), 
@@ -232,8 +232,8 @@ colorTracker blue_tracker(
     .R(R_aux),
     .G(G_aux),
     .B(B_aux),
-    .region(3),
-    .vga_section(reg3),
+    .reg_min(10'd480),
+    .reg_max(10'd637),
     .eh_verde(verde_aux),
     .x(next_x), 
     .y(next_y), 
@@ -250,12 +250,20 @@ framebuffer framebuffer(
   .Y_out(Y_out)
 );
 
-/*wire [7:0] R_in, B_in, G_in;
+wire [7:0] R_in, B_in, G_in;
 
-
-assign R_in = (red_flag || yellow_flag) ? {2'b11, Y_out[7:2]}:{2'b00, Y_out[7:2]}; 
-assign G_in = (green_flag || yellow_flag) ? {2'b11, Y_out[7:2]}:{2'b00, Y_out[7:2]}; 
-assign B_in = (blue_flag) ? {2'b11, Y_out[7:2]}:{2'b00, Y_out[7:2]}; */
+drawShape rectangle(
+  .Y_out(Y_out),
+  .x_pos(next_x),
+  .y_pos(next_y),                  
+  .red_flag(red_flag), 
+  .green_flag(green_flag),
+  .yellow_flag(yellow_flag),
+  .blue_flag(blue_flag),
+  .R_in(R_in), 
+  .G_in(G_in), 
+  .B_in(B_in)
+); 
 
 vga vga(
   //input
@@ -263,9 +271,9 @@ vga vga(
   .CLOCK_25(CLOCK_25),
   //.CLOCK_50(CLOCK_50),
   .SW(SW),
-  .R_in(Y_out),
-  .G_in(Y_out),
-  .B_in(Y_out),
+  .R_in(R_in),
+  .G_in(G_in),
+  .B_in(B_in),
   //output
   .VGA_VS(VGA_VS),
   .VGA_HS(VGA_HS),

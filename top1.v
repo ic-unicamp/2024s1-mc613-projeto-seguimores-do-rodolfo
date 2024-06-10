@@ -257,9 +257,9 @@ drawShape rectangle(
   .x_pos(next_x),
   .y_pos(next_y),                  
   .red_flag(red_flag), 
-  .green_flag(green_flag),
-  .yellow_flag(yellow_flag),
-  .blue_flag(blue_flag),
+  .green_flag(0),
+  .yellow_flag(0),
+  .blue_flag(0),
   .R_in(R_in), 
   .G_in(G_in), 
   .B_in(B_in)

@@ -6,19 +6,35 @@ module detectorVerde(
     input signed [7:0] Cr,     // Byte Y output   
 
     output reg eh_verde, 
+    output reg flag_Y, 
+    output reg flag_Cr, 
+    output reg flag_G, 
+    output reg flag_R, 
+    output reg flag_B, 
     output reg [7:0]R_out,
     output reg [7:0]G_out,
     output reg [7:0]B_out,
     output reg [7:0]Y_dec
 );
 
-// Coeficientes convertidos para ponto fixo com precisão de 8 bits
-/*parameter COEF1 = 8'd142; // Aproximação de 1.402 * 2^8
-parameter COEF2 = 8'd35;  // Aproximação de 0.34414 * 2^8
-parameter COEF3 = 8'd73;  // Aproximação de 0.71414 * 2^8
-parameter COEF4 = 8'd180; // Aproximação de 1.772 * 2^8*/
 
+parameter Y_MIN = 8'd90;
+parameter Y_MAX = 8'd115;
 
+parameter Cb_MIN = 8'd130; //não estamos utilizando por enquanto 
+parameter Cb_MAX = 8'd150;
+
+parameter Cr_MIN = 8'd125;
+parameter Cr_MAX = 8'd160;
+
+parameter R_MIN = 8'd0;
+parameter R_MAX = 8'd70;
+
+parameter G_MIN = 8'd75;
+parameter G_MAX = 8'd255;
+
+parameter B_MIN = 8'd0;
+parameter B_MAX = 8'd220;
 
 reg signed [15:0] Y_signed, Cb_signed, Cr_signed,R_signed,G_signed,B_signed;
 
@@ -44,12 +60,19 @@ always @(posedge PCLK) begin
         B_out = (B_signed[7:0]);
 
 
-        /*(G_out - R_out) > 8'd80
-        (B_out - G_out) < 8'd90
-        B_out < 8'd247
-        R_out < 8'd75*/
-        //G_out > 8'd110 && R_out < 8'd75 && B_out < 8'd247 && (B_out - G_out) < 8'd90
-        if(Y > 8'd90 && Y < 8'd115 && Cr > 8'd125 && Cr <8'd160 && G_out > 8'd75 && R_out <8'd70 && B_out < 8'd220) begin
+        /*Debug para calibração da câmera */ 
+        if (Y > Y_MIN  && Y < Y_MAX ) flag_Y <=1; 
+        else flag_Y <=0; 
+        if(Cr > Cr_MIN && Cr < Cr_MAX) flag_Cr <=1; 
+        else flag_Cr <=0;
+        if(G_out > G_MIN && G_out < G_MAX)  flag_G <=1; 
+        else flag_G <=0;
+        if(R_out > R_MIN && R_out < R_MAX) flag_R <=1; 
+        else flag_R <=0;
+        if(B_out > B_MIN && B_out < B_MAX) flag_B <=1; 
+        else flag_B <=0;
+
+        if( (Y > Y_MIN  && Y < Y_MAX ) && (Cr > Cr_MIN && Cr <Cr_MAX) && (G_out > G_MIN && G_out < G_MAX) && (R_out > R_MIN && R_out < R_MAX) && (B_out > B_MIN && B_out < B_MAX) ) begin
             eh_verde <= 1;
             //Y_out = 8'b0;
             Y_dec = {2'b11, Y[7:2]};

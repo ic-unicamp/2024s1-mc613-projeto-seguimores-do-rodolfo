@@ -2,7 +2,7 @@ module drawShape(
     input [7:0] Y_out, 
     input [9:0] x_pos,
     input [9:0] y_pos,                  
-    input red_flag, 
+    input red_flag,     //flags que identificam a luva em uma ou mais regiões
     input green_flag,
     input yellow_flag,
     input blue_flag,

@@ -1,4 +1,5 @@
 module drawShape(
+    input en_regions, 
     input [7:0] Y_out, 
     input [9:0] x_pos,
     input [9:0] y_pos,                  
@@ -27,22 +28,22 @@ assign G_in = rectangle && ((green_flag && x_pos >= 160 && x_pos < 320) || (yell
 assign B_in = rectangle && (blue_flag && x_pos >= 320 && x_pos < 480) ? 8'hFF : Y_out;
 
 always @(red_flag, green_flag, blue_flag, yellow_flag) begin
-        if (red_flag) begin
+        if (red_flag && en_regions) begin
             rectangle_x = 0;
             rectangle_y = 0;
             rectangle_width = 160; // 1/4 da resolução horizontal
             rectangle_height = 480; 
-        end else if (green_flag) begin
+        end else if (green_flag && en_regions) begin
             rectangle_x = 160;
             rectangle_y = 0;
             rectangle_width = 160; // 1/4 da resolução horizontal
             rectangle_height = 480; 
-        end else if (blue_flag) begin
+        end else if (blue_flag && en_regions) begin
             rectangle_x = 320;
             rectangle_y = 0;
             rectangle_width = 160; // 1/4 da resolução horizontal
             rectangle_height = 480; 
-        end else if (yellow_flag) begin
+        end else if (yellow_flag && en_regions) begin
             rectangle_x = 480;
             rectangle_y = 0;
             rectangle_width = 160; // 1/4 da resolução horizontal

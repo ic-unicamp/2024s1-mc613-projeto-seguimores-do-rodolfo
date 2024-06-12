@@ -1,10 +1,7 @@
 module suavizador(
     input PCLK,
     input VSYNC, 
-    input red,
-    input green,
-    input yellow,
-    input blue,
+    input [9:0] centroX,
     output reg en,
     output reg [3:0] green_region
 ); 
@@ -29,10 +26,10 @@ always@(posedge PCLK) begin
         end else begin
         // Incrementar os contadores
         en <= 0; 
-        counter_red <= red ? counter_red + 1 : 0;
-        counter_green <= green ? counter_green + 1 : 0;
-        counter_yellow <= yellow ? counter_yellow + 1 : 0;
-        counter_blue <= blue ? counter_blue + 1 : 0;  
+        counter_red <= (centroX < 161) ? counter_red + 1 : 0;
+        counter_green <= (centroX > 160  && centroX < 321) ? counter_green + 1 : 0;
+        counter_yellow <= (centroX > 320 && centroX < 479)? counter_yellow + 1 : 0;
+        counter_blue <= (centroX > 480 && centroX< 639) ? counter_blue + 1 : 0;  
         count <= count + 1; 
         end 
     end 

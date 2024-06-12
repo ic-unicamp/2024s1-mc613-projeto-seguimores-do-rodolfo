@@ -20,10 +20,10 @@ module pattern (
 reg [3:0] command_in_aux;
 
 wire [3:0] command_player;
-assign command_player[0] = KEY[0];
-assign command_player[1] = KEY[1];
-assign command_player[2] = KEY[2];
-assign command_player[3] = KEY[3];
+assign command_player[0] = !KEY[3];
+assign command_player[1] = !KEY[2];
+assign command_player[2] = !KEY[1];
+assign command_player[3] = !KEY[0];
 
 reg [27:0] contador = 0;
 reg ITS_FIRST_SCREEN = 1;

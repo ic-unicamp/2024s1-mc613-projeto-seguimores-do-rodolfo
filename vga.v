@@ -2,6 +2,7 @@ module vga(
   output VGA_CLK,
   //input CLOCK_50
   input CLOCK_25,
+  input [3:0] KEY,
   input [9:0] SW,
   input [7:0] R_in,
   input [7:0] G_in,

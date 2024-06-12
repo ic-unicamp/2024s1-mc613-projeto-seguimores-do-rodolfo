@@ -79,8 +79,8 @@ always @(posedge PCLK) begin
             eh_verde <= 1;
             //Y_out = 8'b0;
 /*            Y_dec = {2'b11, Y[7:2]}; */
-            //Y_dec = 255;
-            Y_dec ={2'b11, Y[7:2]};
+            Y_dec = 255;
+            //Y_dec ={2'b11, Y[7:2]};
         end else begin
             eh_verde <= 0; 
             Y_dec = Y;

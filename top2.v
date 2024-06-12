@@ -278,5 +278,4 @@ vga vga(
 );
 
 assign display = rst ? 0 : score;
-,,
 endmodule

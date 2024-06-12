@@ -1,0 +1,6 @@
+
+State Machine - |top1|gerenciador_de_patterns:lista|estado_do_jogo
+Name estado_do_jogo.00 estado_do_jogo.10 estado_do_jogo.01 
+estado_do_jogo.00 0 0 0 
+estado_do_jogo.01 1 0 1 
+estado_do_jogo.10 1 1 0 

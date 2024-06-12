@@ -185,6 +185,17 @@ always @(posedge PCLK) begin //Ajustado o conteúdo gravado na RAM
     B_aux = B_out2;
   end
 end 
+wire [9:0] centroX, centroY;
+green_mass_center green_center(
+    .clk(CLOCK_24),
+    .eh_verde(verde_aux),
+    .SW(SW),
+    .x_pos(next_x),
+    .y_pos(next_y),
+    .centroX(centroX),
+    .centroY(centroY)
+);
+
 
 colorTracker red_tracker(
     .clk(CLOCK_24),
@@ -272,11 +283,28 @@ drawShape green_rectangle(
 
     .rectangle(green_rec)
 ); 
+wire [3:0] green_region;
+wire centro_en;
+suavizador suavizador_regions(
+    .PCLK(PCLK),
+    .VSYNC(VSYNC), 
+    .centroX(centroX),
+    .en(centro_en),
+    .green_region(green_region)
+);
 wire [7:0] R_in, B_in, G_in;
-// Lógica para selecionar a cor de uma região 
-assign R_in = (/*(red_flag && next_x < 161) || */(yellow_flag && next_x > 320 && next_x < 479)) ? 8'hFF : Y_out;
-assign G_in = ((green_flag && next_x > 160 && next_x < 321) || (yellow_flag && next_x > 320 && next_x < 479)) ? 8'hFF: Y_out;
-assign B_in = (blue_flag && next_x > 480 && next_x < 639) ? Y_out: Y_out;
+// Lógica para selecionar a cor de uma região
+
+/*assign R_in = (centro_en) && (( green_region[0] && next_x < 161 ) ||( green_region[2] && next_x > 320 && next_x < 479))? 8'hFF : Y_out;
+assign G_in = (centro_en) && ((green_region[1] && next_x > 160  && next_x < 321) || ( green_region[2] && next_x > 320 && next_x < 479)) ? 8'hFF : Y_out;
+assign B_in = (centro_en) && ( green_region[3] && next_x > 480 && next_x < 639 ) ? 8'hFF : Y_out;*/
+
+assign R_in = ((centroX < 161 && next_x < 161 ) ||(centroX > 320 && centroX < 479 && next_x > 320 && next_x < 479))? 8'hFF : Y_out;
+assign G_in = ((centroX > 160  && centroX < 321 && next_x > 160  && next_x < 321) || (centroX > 320 && centroX < 479 && next_x > 320 && next_x < 479)) ? 8'hFF : Y_out;
+assign B_in = (centroX > 480 && centroX< 639 && next_x > 480 && next_x < 639 ) ? 8'hFF : Y_out;
+/*assign R_in = (/*(red_flag && next_x < 161) || (yellow_flag && next_x > 0 && next_x < 639)) ? 8'hFF : Y_out;*/ 
+/*assign G_in = ((green_flag && next_x >0 && next_x < 639) || (yellow_flag && next_x > 0 && next_x < 639)) ? 8'hFF: Y_out;*/
+/*assign B_in = (blue_flag && next_x > 480 && next_x < 639) ?0: Y_out;*/
 
 
 vga vga(

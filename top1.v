@@ -34,9 +34,7 @@ assign ponto = ponto1 || ponto2 || ponto3 || ponto4 || ponto5 || ponto6 || ponto
 reg [7:0] score = 0;
 
 
-always @ (posedge ponto) begin
-  score = score + 1;
-end
+
 
 wire [3:0] command_out_ptr1;
 wire [7:0] y_pos_ptr1;
@@ -241,6 +239,7 @@ pattern ptr8(
 gerenciador_de_patterns lista(
   .trocar_comando(trocar_comando),
   .rst(rst),
+  .KEY(KEY),
   .fim_da_lista(203),
   .fim_de_jogo(fim_de_jogo),
   .prox_comando(comando)
@@ -300,5 +299,41 @@ camera camera(
   .PCLK(PCLK)
 );
 
-assign display = rst ? 0 : score;
+reg GAME_STATE = 0;
+reg [19:0] max_score;
+reg [19:0] max_score_aux;
+
+always @ (posedge ponto || !KEY[0] && !KEY[1] && !KEY[2] && !KEY[3]) begin
+  if (ponto) begin
+    score = score + 1;
+  end 
+  else if (GAME_STATE == 0) begin
+    score = 0;
+  end
+end
+  
+always @ (posedge CLOCK_25) begin
+
+  case (GAME_STATE)
+    0: begin
+      if (!KEY[0] && !KEY[1] && !KEY[2] && !KEY[3]) GAME_STATE = 1;
+    end
+    1: begin
+      if (score_aux > max_score) max_score = score_aux;
+      if (fim_de_jogo) GAME_STATE = 2;
+    end
+    2: begin
+      if (!KEY[0] && !KEY[1] && !KEY[2] && !KEY[3]) GAME_STATE = 1;
+    end
+    default: begin
+      max_score_aux = max_score;
+      GAME_STATE = 0;
+    end
+  endcase
+end
+
+wire [19:0] score_aux;
+assign score_aux = score;
+
+assign display = (!SW[1]) ? max_score : score;
 endmodule

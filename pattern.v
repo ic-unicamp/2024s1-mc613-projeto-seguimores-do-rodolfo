@@ -48,6 +48,7 @@ always @(posedge CLOCK_25) begin
             contador <= 0;
             if (reset) begin
                 y_pos = y_ini_pos;
+                trocar = 1;
             end
             else if (y_pos >= 480) begin
                 y_pos = 0;

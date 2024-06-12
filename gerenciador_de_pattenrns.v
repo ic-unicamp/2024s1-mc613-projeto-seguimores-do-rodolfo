@@ -1,6 +1,7 @@
 module gerenciador_de_patterns(
     /* input [3:0] lista_de_comandos [10:0], */
     input trocar_comando,
+    input [3:0] KEY,
     input rst,
     input [7:0] fim_da_lista,
     output reg fim_de_jogo,
@@ -17,7 +18,7 @@ assign lista_de_comandos[4] = 4;     // Nota D
 assign lista_de_comandos[5] = 3;     // Nota C
 assign lista_de_comandos[6] = 2;     // Nota B
 assign lista_de_comandos[7] = 1;     // Nota A
-assign lista_de_comandos[8] = 0;     // Nota de Pausa
+assign lista_de_comandos[8] = 2;     // Nota de Pausa
 assign lista_de_comandos[9] = 1;     // Nota A
 assign lista_de_comandos[10] = 2;    // Nota B
 assign lista_de_comandos[11] = 3;    // Nota C
@@ -197,7 +198,7 @@ assign lista_de_comandos[184] = 11;   // Nota K
 assign lista_de_comandos[185] = 12;   // Nota L
 assign lista_de_comandos[186] = 13;   // Nota M
 assign lista_de_comandos[187] = 14;   // Nota N
-assign lista_de_comandos[188] = 15;   // Nota O
+assign lista_de_comandos[188] = 12;   // Nota O
 assign lista_de_comandos[189] = 14;   // Nota N
 assign lista_de_comandos[190] = 13;   // Nota M
 assign lista_de_comandos[191] = 12;   // Nota L
@@ -206,22 +207,26 @@ assign lista_de_comandos[193] = 10;   // Nota J
 assign lista_de_comandos[194] = 9;    // Nota I
 assign lista_de_comandos[195] = 8;    // Nota H
 assign lista_de_comandos[196] = 7;    // Nota G
-assign lista_de_comandos[197] = 6;    // Nota F
-assign lista_de_comandos[198] = 5;    // Nota E
-assign lista_de_comandos[199] = 4;    // Nota D
-assign lista_de_comandos[200] = 3;    // Nota C
-assign lista_de_comandos[201] = 2;    // Nota B
-assign lista_de_comandos[202] = 1;    // Nota A
+assign lista_de_comandos[197] = 0;    // Nota F
+assign lista_de_comandos[198] = 0;    // Nota E
+assign lista_de_comandos[199] = 0;    // Nota D
+assign lista_de_comandos[200] = 0;    // Nota C
+assign lista_de_comandos[201] = 0;    // Nota B
+assign lista_de_comandos[202] = 0;    // Nota A
 
 reg [1:0] estado_do_jogo; //0 inicio; 1 meio; 2 fim
 
 always @ (posedge trocar_comando) begin
-    if (rst) estado_do_jogo = 0;
+    if (rst) begin
+        estado_do_jogo = 0;
+        index = 0;
+        fim_de_jogo = 0;
+    end
     case (estado_do_jogo)
     0: begin
         index = 0;
-        estado_do_jogo = 1;
         fim_de_jogo = 0;
+        if (!KEY[0] && !KEY[1] && !KEY[2] && !KEY[3]) estado_do_jogo = 1;
     end
     1: begin
         index = index + 1;
@@ -229,6 +234,7 @@ always @ (posedge trocar_comando) begin
     end
     2: begin 
         fim_de_jogo = 1;
+        if (!KEY[0] && !KEY[1] && !KEY[2] && !KEY[3]) estado_do_jogo = 0;
     end
     default estado_do_jogo = 0;
 

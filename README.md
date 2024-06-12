@@ -8,7 +8,7 @@ Grupo:
 - RAFAEL MASATO HAGA COSTA (247348)
 
 ## Descrição
-
+### Confira a implementação na branch detecta-verde
 ### Conceito do projeto
 
 Como projeto final da disciplina de MC613, o grupo optou por implementar um jogo de ritmo

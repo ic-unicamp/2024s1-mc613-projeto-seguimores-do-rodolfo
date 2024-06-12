@@ -252,20 +252,32 @@ framebuffer framebuffer(
   .Y_out(Y_out)
 );
 
-wire [7:0] R_in, B_in, G_in;
 
-drawShape rectangle(
-  .Y_out(Y_out),
-  .x_pos(next_x),
-  .y_pos(next_y),                  
-  .red_flag(red_flag), 
-  .green_flag(0),
-  .yellow_flag(0),
-  .blue_flag(0),
-  .R_in(R_in), 
-  .G_in(G_in), 
-  .B_in(B_in)
+wire red_rec, green_rec;
+drawShape red_rectangle(
+    .clk(CLOCK_24), 
+    .x_pos(next_x),
+    .y_pos(next_y),                 
+    .flag(red_flag),     
+    .reg_min(0), 
+
+    .rectangle(red_rec)
 ); 
+drawShape green_rectangle(
+    .clk(CLOCK_24), 
+    .x_pos(next_x),
+    .y_pos(next_y),                 
+    .flag(green_flag),     
+    .reg_min(10'd160), 
+
+    .rectangle(green_rec)
+); 
+wire [7:0] R_in, B_in, G_in;
+// Lógica para selecionar a cor de uma região 
+assign R_in = (/*(red_flag && next_x < 161) || */(yellow_flag && next_x > 320 && next_x < 479)) ? 8'hFF : Y_out;
+assign G_in = ((green_flag && next_x > 160 && next_x < 321) || (yellow_flag && next_x > 320 && next_x < 479)) ? 8'hFF: Y_out;
+assign B_in = (blue_flag && next_x > 480 && next_x < 639) ? Y_out: Y_out;
+
 
 vga vga(
   //input

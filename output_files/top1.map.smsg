@@ -1,6 +1,6 @@
-Warning (10268): Verilog HDL information at detectorVerde.v(43): always construct contains both blocking and non-blocking assignments File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 43
-Warning (10273): Verilog HDL warning at top1.v(104): extended using "x" or "z" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 104
-Warning (10273): Verilog HDL warning at top1.v(105): extended using "x" or "z" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 105
-Warning (10273): Verilog HDL warning at top1.v(106): extended using "x" or "z" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 106
-Warning (10273): Verilog HDL warning at top1.v(107): extended using "x" or "z" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 107
-Warning (10268): Verilog HDL information at camera.v(33): always construct contains both blocking and non-blocking assignments File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 33
+Warning (10268): Verilog HDL information at detectorVerde.v(43): always construct contains both blocking and non-blocking assignments File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 43
+Warning (10273): Verilog HDL warning at top1.v(104): extended using "x" or "z" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 104
+Warning (10273): Verilog HDL warning at top1.v(105): extended using "x" or "z" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 105
+Warning (10273): Verilog HDL warning at top1.v(106): extended using "x" or "z" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 106
+Warning (10273): Verilog HDL warning at top1.v(107): extended using "x" or "z" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 107
+Warning (10268): Verilog HDL information at camera.v(33): always construct contains both blocking and non-blocking assignments File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 33

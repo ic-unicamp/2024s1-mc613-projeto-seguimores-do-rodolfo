@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top1
-Mon Jun 10 17:32:11 2024
+Tue Jun 11 21:22:39 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -76,13 +76,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun 10 17:32:11 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 11 21:22:39 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; top1                                        ;
 ; Top-level Entity Name           ; top1                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2815                                        ;
+; Total registers                 ; 2818                                        ;
 ; Total pins                      ; 76                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,481,024                                   ;
@@ -209,85 +209,85 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                      ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                            ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; colorTracker.v                                                     ; yes             ; User Verilog HDL File                        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v                                                     ;             ;
-; detectorVerde.v                                                    ; yes             ; User Verilog HDL File                        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v                                                    ;             ;
-; vga.v                                                              ; yes             ; User Verilog HDL File                        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v                                                              ;             ;
-; top1.v                                                             ; yes             ; User Verilog HDL File                        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v                                                             ;             ;
-; framebuffer.v                                                      ; yes             ; User Verilog HDL File                        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/framebuffer.v                                                      ;             ;
-; camera.v                                                           ; yes             ; User Verilog HDL File                        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v                                                           ;             ;
-; ram2.v                                                             ; yes             ; User Wizard-Generated File                   ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v                                                             ;             ;
-; PLL.v                                                              ; yes             ; User Wizard-Generated File                   ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL.v                                                              ; PLL         ;
-; PLL/PLL_0002.v                                                     ; yes             ; User Verilog HDL File                        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v                                                     ; PLL         ;
-; pll_vga.v                                                          ; yes             ; User Wizard-Generated File                   ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v                                                          ; pll_vga     ;
-; pll_vga/pll_vga_0002.v                                             ; yes             ; User Verilog HDL File                        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v                                             ; pll_vga     ;
-; altera_pll.v                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v                                                                           ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                         ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                  ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                            ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                         ;             ;
-; aglobal171.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                                         ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                          ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc                                                                             ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                                                                             ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                                                                           ;             ;
-; db/altsyncram_02q1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf                                             ;             ;
-; db/decode_3na.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_3na.tdf                                                  ;             ;
-; db/decode_s2a.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_s2a.tdf                                                  ;             ;
-; db/mux_jhb.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/mux_jhb.tdf                                                     ;             ;
-; drawShape.v                                                        ; yes             ; Auto-Found Verilog HDL File                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v                                                        ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                      ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                 ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                    ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                       ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                       ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/dffeea.inc                                                                             ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                          ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                           ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                                 ;             ;
-; db/altsyncram_ve84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_ve84.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.tdf                                                                           ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                         ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                            ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                                    ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.inc                                                                         ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                            ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/muxlut.inc                                                                             ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/bypassff.inc                                                                           ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altshift.inc                                                                           ;             ;
-; db/mux_elc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/mux_elc.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                                         ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/declut.inc                                                                             ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_compare.inc                                                                        ;             ;
-; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_vnf.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                        ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                        ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/cmpconst.inc                                                                           ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                        ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                ;             ;
-; db/cntr_rai.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_rai.tdf                                                    ;             ;
-; db/cmpr_g9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_g9c.tdf                                                    ;             ;
-; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_4vi.tdf                                                    ;             ;
-; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_09i.tdf                                                    ;             ;
-; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_c9c.tdf                                                    ;             ;
-; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_kri.tdf                                                    ;             ;
-; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_99c.tdf                                                    ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                         ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                          ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                      ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                            ; altera_sld  ;
-; db/ip/sld1350ec5e/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                       ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                  ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                        ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; colorTracker.v                                                     ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v                                                     ;             ;
+; detectorVerde.v                                                    ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v                                                    ;             ;
+; vga.v                                                              ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v                                                              ;             ;
+; top1.v                                                             ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v                                                             ;             ;
+; framebuffer.v                                                      ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/framebuffer.v                                                      ;             ;
+; camera.v                                                           ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v                                                           ;             ;
+; ram2.v                                                             ; yes             ; User Wizard-Generated File                   ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v                                                             ;             ;
+; PLL.v                                                              ; yes             ; User Wizard-Generated File                   ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL.v                                                              ; PLL         ;
+; PLL/PLL_0002.v                                                     ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v                                                     ; PLL         ;
+; pll_vga.v                                                          ; yes             ; User Wizard-Generated File                   ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v                                                          ; pll_vga     ;
+; pll_vga/pll_vga_0002.v                                             ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v                                             ; pll_vga     ;
+; altera_pll.v                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v                                                                                       ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                     ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                              ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                        ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                     ;             ;
+; aglobal171.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                                                     ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                      ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc                                                                                         ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                                                                                         ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                                                                                       ;             ;
+; db/altsyncram_02q1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf                                             ;             ;
+; db/decode_3na.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_3na.tdf                                                  ;             ;
+; db/decode_s2a.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_s2a.tdf                                                  ;             ;
+; db/mux_jhb.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/mux_jhb.tdf                                                     ;             ;
+; drawShape.v                                                        ; yes             ; Auto-Found Verilog HDL File                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v                                                        ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                                  ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                             ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                                ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                                   ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                                   ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/dffeea.inc                                                                                         ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                                      ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                                       ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                                             ;             ;
+; db/altsyncram_ve84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_ve84.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.tdf                                                                                       ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                                     ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                                        ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                                                ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.inc                                                                                     ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                                        ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/muxlut.inc                                                                                         ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/bypassff.inc                                                                                       ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altshift.inc                                                                                       ;             ;
+; db/mux_elc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/mux_elc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                                                     ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/declut.inc                                                                                         ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_compare.inc                                                                                    ;             ;
+; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_vnf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                                    ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                                    ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/cmpconst.inc                                                                                       ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                                    ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                            ;             ;
+; db/cntr_rai.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_rai.tdf                                                    ;             ;
+; db/cmpr_g9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_g9c.tdf                                                    ;             ;
+; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_4vi.tdf                                                    ;             ;
+; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_09i.tdf                                                    ;             ;
+; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_c9c.tdf                                                    ;             ;
+; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_kri.tdf                                                    ;             ;
+; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_99c.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                                     ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                                      ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                                  ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                                        ; altera_sld  ;
+; db/ip/sld1350ec5e/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                                   ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +--------------------------------------------------------------+
@@ -295,16 +295,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1595           ;
+; Estimate of Logic utilization (ALMs needed) ; 1578           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1043           ;
-;     -- 7 input functions                    ; 2              ;
-;     -- 6 input functions                    ; 275            ;
-;     -- 5 input functions                    ; 286            ;
-;     -- 4 input functions                    ; 95             ;
-;     -- <=3 input functions                  ; 385            ;
+; Combinational ALUT usage for logic          ; 1016           ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 269            ;
+;     -- 5 input functions                    ; 272            ;
+;     -- 4 input functions                    ; 100            ;
+;     -- <=3 input functions                  ; 375            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 2815           ;
+; Dedicated logic registers                   ; 2818           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 76             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -317,7 +317,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 1749           ;
-; Total fan-out                               ; 25839          ;
+; Total fan-out                               ; 25703          ;
 ; Average fan-out                             ; 5.68           ;
 +---------------------------------------------+----------------+
 
@@ -327,25 +327,23 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                              ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top1                                                                                                                                   ; 1043 (13)           ; 2815 (9)                  ; 2481024           ; 8          ; 76   ; 0            ; |top1                                                                                                                                                                                                                                                                                                                                            ; top1                              ; work         ;
+; |top1                                                                                                                                   ; 1016 (13)           ; 2818 (10)                 ; 2481024           ; 8          ; 76   ; 0            ; |top1                                                                                                                                                                                                                                                                                                                                            ; top1                              ; work         ;
 ;    |PLL:clk_24|                                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|PLL:clk_24                                                                                                                                                                                                                                                                                                                                 ; PLL                               ; PLL          ;
 ;       |PLL_0002:pll_inst|                                                                                                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|PLL:clk_24|PLL_0002:pll_inst                                                                                                                                                                                                                                                                                                               ; PLL_0002                          ; PLL          ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|PLL:clk_24|PLL_0002:pll_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                                       ; altera_pll                        ; work         ;
 ;    |camera:camera|                                                                                                                      ; 28 (28)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|camera:camera                                                                                                                                                                                                                                                                                                                              ; camera                            ; work         ;
-;    |colorTracker:blue_tracker|                                                                                                          ; 31 (31)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|colorTracker:blue_tracker                                                                                                                                                                                                                                                                                                                  ; colorTracker                      ; work         ;
+;    |colorTracker:blue_tracker|                                                                                                          ; 30 (30)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|colorTracker:blue_tracker                                                                                                                                                                                                                                                                                                                  ; colorTracker                      ; work         ;
 ;    |colorTracker:green_tracker|                                                                                                         ; 22 (22)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|colorTracker:green_tracker                                                                                                                                                                                                                                                                                                                 ; colorTracker                      ; work         ;
 ;    |colorTracker:red_tracker|                                                                                                           ; 23 (23)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|colorTracker:red_tracker                                                                                                                                                                                                                                                                                                                   ; colorTracker                      ; work         ;
 ;    |colorTracker:yellow_tracker|                                                                                                        ; 22 (22)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|colorTracker:yellow_tracker                                                                                                                                                                                                                                                                                                                ; colorTracker                      ; work         ;
-;    |detectorVerde:dec_verde|                                                                                                            ; 50 (50)             ; 32 (32)                   ; 0                 ; 4          ; 0    ; 0            ; |top1|detectorVerde:dec_verde                                                                                                                                                                                                                                                                                                                    ; detectorVerde                     ; work         ;
-;    |detectorVerde:dec|                                                                                                                  ; 51 (51)             ; 37 (37)                   ; 0                 ; 4          ; 0    ; 0            ; |top1|detectorVerde:dec                                                                                                                                                                                                                                                                                                                          ; detectorVerde                     ; work         ;
-;    |drawShape:rectangle|                                                                                                                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|drawShape:rectangle                                                                                                                                                                                                                                                                                                                        ; drawShape                         ; work         ;
-;    |framebuffer:framebuffer|                                                                                                            ; 193 (0)             ; 12 (0)                    ; 2457600           ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer                                                                                                                                                                                                                                                                                                                    ; framebuffer                       ; work         ;
-;       |ram2:mem|                                                                                                                        ; 193 (0)             ; 12 (0)                    ; 2457600           ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem                                                                                                                                                                                                                                                                                                           ; ram2                              ; work         ;
-;          |altsyncram:altsyncram_component|                                                                                              ; 193 (0)             ; 12 (0)                    ; 2457600           ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                           ; altsyncram                        ; work         ;
-;             |altsyncram_02q1:auto_generated|                                                                                            ; 193 (0)             ; 12 (12)                   ; 2457600           ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated                                                                                                                                                                                                                                            ; altsyncram_02q1                   ; work         ;
+;    |detectorVerde:dec_verde|                                                                                                            ; 44 (44)             ; 33 (33)                   ; 0                 ; 4          ; 0    ; 0            ; |top1|detectorVerde:dec_verde                                                                                                                                                                                                                                                                                                                    ; detectorVerde                     ; work         ;
+;    |detectorVerde:dec|                                                                                                                  ; 54 (54)             ; 38 (38)                   ; 0                 ; 4          ; 0    ; 0            ; |top1|detectorVerde:dec                                                                                                                                                                                                                                                                                                                          ; detectorVerde                     ; work         ;
+;    |framebuffer:framebuffer|                                                                                                            ; 81 (0)              ; 12 (0)                    ; 2457600           ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer                                                                                                                                                                                                                                                                                                                    ; framebuffer                       ; work         ;
+;       |ram2:mem|                                                                                                                        ; 81 (0)              ; 12 (0)                    ; 2457600           ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem                                                                                                                                                                                                                                                                                                           ; ram2                              ; work         ;
+;          |altsyncram:altsyncram_component|                                                                                              ; 81 (0)              ; 12 (0)                    ; 2457600           ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                           ; altsyncram                        ; work         ;
+;             |altsyncram_02q1:auto_generated|                                                                                            ; 81 (0)              ; 12 (12)                   ; 2457600           ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated                                                                                                                                                                                                                                            ; altsyncram_02q1                   ; work         ;
 ;                |decode_3na:decode2|                                                                                                     ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|decode_3na:decode2                                                                                                                                                                                                                         ; decode_3na                        ; work         ;
 ;                |decode_s2a:rden_decode_b|                                                                                               ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|decode_s2a:rden_decode_b                                                                                                                                                                                                                   ; decode_s2a                        ; work         ;
-;                |mux_jhb:mux3|                                                                                                           ; 112 (112)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|mux_jhb:mux3                                                                                                                                                                                                                               ; mux_jhb                           ; work         ;
 ;    |pll_vga:pll_vga_inst|                                                                                                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|pll_vga:pll_vga_inst                                                                                                                                                                                                                                                                                                                       ; pll_vga                           ; pll_vga      ;
 ;       |pll_vga_0002:pll_vga_inst|                                                                                                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst                                                                                                                                                                                                                                                                                             ; pll_vga_0002                      ; pll_vga      ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                     ; altera_pll                        ; work         ;
@@ -572,7 +570,7 @@ refer to the applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 1 (1)               ; 183 (183)                 ; 0                 ; 0          ; 0    ; 0            ; |top1|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |top1|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |vga:vga|                                                                                                                            ; 84 (84)             ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|vga:vga                                                                                                                                                                                                                                                                                                                                    ; vga                               ; work         ;
+;    |vga:vga|                                                                                                                            ; 174 (174)           ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |top1|vga:vga                                                                                                                                                                                                                                                                                                                                    ; vga                               ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -615,17 +613,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+---------------------------------------+----------------------------------------------+
-; Register name                         ; Reason for Removal                           ;
-+---------------------------------------+----------------------------------------------+
-; detectorVerde:dec_verde|Y_dec[6]      ; Merged with detectorVerde:dec_verde|Y_dec[7] ;
-; detectorVerde:dec|Y_dec[6]            ; Merged with detectorVerde:dec|Y_dec[7]       ;
-; Y_enter[7]                            ; Merged with Y_enter[6]                       ;
-; camera:camera|CONTADOR_C[19]          ; Lost fanout                                  ;
-; Total Number of Removed Registers = 4 ;                                              ;
-+---------------------------------------+----------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; camera:camera|CONTADOR_C[19]          ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -633,12 +628,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2815  ;
+; Total registers                              ; 2818  ;
 ; Number of registers using Synchronous Clear  ; 260   ;
-; Number of registers using Synchronous Load   ; 302   ;
+; Number of registers using Synchronous Load   ; 303   ;
 ; Number of registers using Asynchronous Clear ; 861   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1033  ;
+; Number of registers using Clock Enable       ; 1035  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -668,21 +663,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top1|vga:vga|x[2]                                                                                                                      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top1|vga:vga|nxt_x[4]                                                                                                                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top1|vga:vga|nxt_x[7]                                                                                                                  ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top1|vga:vga|nxt_y[2]                                                                                                                  ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |top1|camera:camera|CONTADOR_C[3]                                                                                                       ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top1|vga:vga|y[2]                                                                                                                      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top1|camera:camera|Cb_aux[7]                                                                                                           ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |top1|camera:camera|CONTADOR_C[0]                                                                                                       ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top1|vga:vga|y[1]                                                                                                                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top1|camera:camera|Cb_aux[5]                                                                                                           ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top1|camera:camera|Cr_aux[6]                                                                                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top1|camera:camera|Y_2[0]                                                                                                              ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top1|camera:camera|Y[7]                                                                                                                ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top1|colorTracker:blue_tracker|green_count[9]                                                                                          ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top1|colorTracker:green_tracker|green_count[7]                                                                                         ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top1|colorTracker:red_tracker|green_count[0]                                                                                           ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top1|colorTracker:yellow_tracker|green_count[8]                                                                                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top1|vga:vga|VGA_R[0]                                                                                                                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|mux_jhb:mux3|l3_w4_n4_mux_dataout ;
-; 33:1               ; 8 bits    ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|mux_jhb:mux3|l6_w0_n0_mux_dataout ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top1|camera:camera|Y_2[1]                                                                                                              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top1|camera:camera|Y[0]                                                                                                                ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top1|colorTracker:blue_tracker|green_count[13]                                                                                         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top1|colorTracker:green_tracker|green_count[2]                                                                                         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top1|colorTracker:red_tracker|green_count[14]                                                                                          ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top1|colorTracker:yellow_tracker|green_count[1]                                                                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top1|framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|mux_jhb:mux3|l3_w7_n4_mux_dataout ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |top1|vga:vga|VGA_G[0]                                                                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1215,18 +1209,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------+------------------------------------+
 ; Parameter Name ; Value    ; Type                               ;
 +----------------+----------+------------------------------------+
-; Y_MIN          ; 01011010 ; Unsigned Binary                    ;
-; Y_MAX          ; 01110011 ; Unsigned Binary                    ;
+; Y_MIN          ; 10001100 ; Unsigned Binary                    ;
+; Y_MAX          ; 11001000 ; Unsigned Binary                    ;
 ; Cb_MIN         ; 10000010 ; Unsigned Binary                    ;
 ; Cb_MAX         ; 10010110 ; Unsigned Binary                    ;
 ; Cr_MIN         ; 01111101 ; Unsigned Binary                    ;
 ; Cr_MAX         ; 10100000 ; Unsigned Binary                    ;
 ; R_MIN          ; 00000000 ; Unsigned Binary                    ;
-; R_MAX          ; 01000110 ; Unsigned Binary                    ;
-; G_MIN          ; 01001011 ; Unsigned Binary                    ;
+; R_MAX          ; 00001010 ; Unsigned Binary                    ;
+; G_MIN          ; 11001000 ; Unsigned Binary                    ;
 ; G_MAX          ; 11111111 ; Unsigned Binary                    ;
 ; B_MIN          ; 00000000 ; Unsigned Binary                    ;
-; B_MAX          ; 11011100 ; Unsigned Binary                    ;
+; B_MAX          ; 00001010 ; Unsigned Binary                    ;
 +----------------+----------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1236,18 +1230,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------+------------------------------------------+
 ; Parameter Name ; Value    ; Type                                     ;
 +----------------+----------+------------------------------------------+
-; Y_MIN          ; 01011010 ; Unsigned Binary                          ;
-; Y_MAX          ; 01110011 ; Unsigned Binary                          ;
+; Y_MIN          ; 10001100 ; Unsigned Binary                          ;
+; Y_MAX          ; 11001000 ; Unsigned Binary                          ;
 ; Cb_MIN         ; 10000010 ; Unsigned Binary                          ;
 ; Cb_MAX         ; 10010110 ; Unsigned Binary                          ;
 ; Cr_MIN         ; 01111101 ; Unsigned Binary                          ;
 ; Cr_MAX         ; 10100000 ; Unsigned Binary                          ;
 ; R_MIN          ; 00000000 ; Unsigned Binary                          ;
-; R_MAX          ; 01000110 ; Unsigned Binary                          ;
-; G_MIN          ; 01001011 ; Unsigned Binary                          ;
+; R_MAX          ; 00001010 ; Unsigned Binary                          ;
+; G_MIN          ; 11001000 ; Unsigned Binary                          ;
 ; G_MAX          ; 11111111 ; Unsigned Binary                          ;
 ; B_MIN          ; 00000000 ; Unsigned Binary                          ;
-; B_MAX          ; 11011100 ; Unsigned Binary                          ;
+; B_MAX          ; 00001010 ; Unsigned Binary                          ;
 +----------------+----------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1629,27 +1623,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 253                         ;
-;     ENA               ; 67                          ;
+; arriav_ff             ; 256                         ;
+;     ENA               ; 69                          ;
 ;     ENA SCLR          ; 149                         ;
 ;     SCLR              ; 10                          ;
-;     SLD               ; 8                           ;
+;     SLD               ; 9                           ;
 ;     plain             ; 19                          ;
 ; arriav_io_obuf        ; 36                          ;
-; arriav_lcell_comb     ; 520                         ;
+; arriav_lcell_comb     ; 494                         ;
 ;     arith             ; 153                         ;
 ;         1 data inputs ; 59                          ;
 ;         2 data inputs ; 94                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 319                         ;
-;         0 data inputs ; 1                           ;
+;     normal            ; 295                         ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 13                          ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 55                          ;
-;         5 data inputs ; 45                          ;
-;         6 data inputs ; 177                         ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 60                          ;
+;         5 data inputs ; 31                          ;
+;         6 data inputs ; 171                         ;
 ;     shared            ; 46                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
@@ -1660,8 +1652,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; generic_pll           ; 2                           ;
 ; stratixv_ram_block    ; 304                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.60                        ;
-; Average LUT depth     ; 3.13                        ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 2.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2087,39 +2079,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Jun 10 17:31:56 2024
+    Info: Processing started: Tue Jun 11 21:22:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top1 -c top1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file colorTracker.v
-    Info (12023): Found entity 1: colorTracker File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 1
+    Info (12023): Found entity 1: colorTracker File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file detectorVerde.v
-    Info (12023): Found entity 1: detectorVerde File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 1
+    Info (12023): Found entity 1: detectorVerde File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.v
-    Info (12023): Found entity 1: vga File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 1
+    Info (12023): Found entity 1: vga File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top1.v
-    Info (12023): Found entity 1: top1 File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 1
+    Info (12023): Found entity 1: top1 File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file framebuffer.v
-    Info (12023): Found entity 1: framebuffer File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/framebuffer.v Line: 1
+    Info (12023): Found entity 1: framebuffer File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/framebuffer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file camera.v
-    Info (12023): Found entity 1: camera File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 1
+    Info (12023): Found entity 1: camera File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram2.v
-    Info (12023): Found entity 1: ram2 File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v Line: 39
+    Info (12023): Found entity 1: ram2 File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file PLL.v
-    Info (12023): Found entity 1: PLL File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL.v Line: 8
+    Info (12023): Found entity 1: PLL File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file PLL/PLL_0002.v
-    Info (12023): Found entity 1: PLL_0002 File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v Line: 2
+    Info (12023): Found entity 1: PLL_0002 File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file pll_vga.v
-    Info (12023): Found entity 1: pll_vga File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v Line: 8
+    Info (12023): Found entity 1: pll_vga File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll_vga/pll_vga_0002.v
-    Info (12023): Found entity 1: pll_vga_0002 File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 2
+    Info (12023): Found entity 1: pll_vga_0002 File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 2
 Info (12127): Elaborating entity "top1" for the top level hierarchy
-Info (12128): Elaborating entity "PLL" for hierarchy "PLL:clk_24" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 31
-Info (12128): Elaborating entity "PLL_0002" for hierarchy "PLL:clk_24|PLL_0002:pll_inst" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL.v Line: 19
-Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL:clk_24|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v Line: 85
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:clk_24" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 31
+Info (12128): Elaborating entity "PLL_0002" for hierarchy "PLL:clk_24|PLL_0002:pll_inst" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL.v Line: 19
+Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL:clk_24|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "PLL:clk_24|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v Line: 85
-Info (12133): Instantiated megafunction "PLL:clk_24|PLL_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "PLL:clk_24|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v Line: 85
+Info (12133): Instantiated megafunction "PLL:clk_24|PLL_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/PLL/PLL_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -2180,12 +2172,12 @@ Info (12133): Instantiated megafunction "PLL:clk_24|PLL_0002:pll_inst|altera_pll
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "pll_vga" for hierarchy "pll_vga:pll_vga_inst" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 37
-Info (12128): Elaborating entity "pll_vga_0002" for hierarchy "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v Line: 19
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 85
+Info (12128): Elaborating entity "pll_vga" for hierarchy "pll_vga:pll_vga_inst" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 37
+Info (12128): Elaborating entity "pll_vga_0002" for hierarchy "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v Line: 19
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -2246,26 +2238,26 @@ Info (12133): Instantiated megafunction "pll_vga:pll_vga_inst|pll_vga_0002:pll_v
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "camera" for hierarchy "camera:camera" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 141
-Warning (10230): Verilog HDL assignment warning at camera.v(55): truncated value with size 32 to match size of target (2) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 55
-Warning (10230): Verilog HDL assignment warning at camera.v(60): truncated value with size 32 to match size of target (20) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 60
-Warning (10230): Verilog HDL assignment warning at camera.v(67): truncated value with size 32 to match size of target (20) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 67
-Info (12128): Elaborating entity "detectorVerde" for hierarchy "detectorVerde:dec" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 153
-Warning (10230): Verilog HDL assignment warning at detectorVerde.v(47): truncated value with size 32 to match size of target (16) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 47
-Warning (10230): Verilog HDL assignment warning at detectorVerde.v(48): truncated value with size 32 to match size of target (16) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 48
-Warning (10230): Verilog HDL assignment warning at detectorVerde.v(51): truncated value with size 32 to match size of target (16) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 51
-Warning (10230): Verilog HDL assignment warning at detectorVerde.v(53): truncated value with size 32 to match size of target (16) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 53
-Warning (10230): Verilog HDL assignment warning at detectorVerde.v(55): truncated value with size 32 to match size of target (16) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 55
-Info (12128): Elaborating entity "colorTracker" for hierarchy "colorTracker:red_tracker" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 199
-Warning (10230): Verilog HDL assignment warning at colorTracker.v(32): truncated value with size 32 to match size of target (16) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 32
-Warning (10230): Verilog HDL assignment warning at colorTracker.v(33): truncated value with size 32 to match size of target (16) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 33
-Warning (10230): Verilog HDL assignment warning at colorTracker.v(35): truncated value with size 32 to match size of target (8) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 35
-Warning (10230): Verilog HDL assignment warning at colorTracker.v(36): truncated value with size 32 to match size of target (8) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 36
-Info (12128): Elaborating entity "framebuffer" for hierarchy "framebuffer:framebuffer" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 251
-Info (12128): Elaborating entity "ram2" for hierarchy "framebuffer:framebuffer|ram2:mem" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/framebuffer.v Line: 22
-Info (12128): Elaborating entity "altsyncram" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v Line: 90
-Info (12130): Elaborated megafunction instantiation "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v Line: 90
-Info (12133): Instantiated megafunction "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component" with the following parameter: File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v Line: 90
+Info (12128): Elaborating entity "camera" for hierarchy "camera:camera" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 141
+Warning (10230): Verilog HDL assignment warning at camera.v(55): truncated value with size 32 to match size of target (2) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 55
+Warning (10230): Verilog HDL assignment warning at camera.v(60): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 60
+Warning (10230): Verilog HDL assignment warning at camera.v(67): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 67
+Info (12128): Elaborating entity "detectorVerde" for hierarchy "detectorVerde:dec" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 153
+Warning (10230): Verilog HDL assignment warning at detectorVerde.v(47): truncated value with size 32 to match size of target (16) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 47
+Warning (10230): Verilog HDL assignment warning at detectorVerde.v(48): truncated value with size 32 to match size of target (16) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 48
+Warning (10230): Verilog HDL assignment warning at detectorVerde.v(51): truncated value with size 32 to match size of target (16) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 51
+Warning (10230): Verilog HDL assignment warning at detectorVerde.v(53): truncated value with size 32 to match size of target (16) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 53
+Warning (10230): Verilog HDL assignment warning at detectorVerde.v(55): truncated value with size 32 to match size of target (16) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 55
+Info (12128): Elaborating entity "colorTracker" for hierarchy "colorTracker:red_tracker" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 199
+Warning (10230): Verilog HDL assignment warning at colorTracker.v(32): truncated value with size 32 to match size of target (16) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 32
+Warning (10230): Verilog HDL assignment warning at colorTracker.v(33): truncated value with size 32 to match size of target (16) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 33
+Warning (10230): Verilog HDL assignment warning at colorTracker.v(35): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 35
+Warning (10230): Verilog HDL assignment warning at colorTracker.v(36): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/colorTracker.v Line: 36
+Info (12128): Elaborating entity "framebuffer" for hierarchy "framebuffer:framebuffer" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 251
+Info (12128): Elaborating entity "ram2" for hierarchy "framebuffer:framebuffer|ram2:mem" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/framebuffer.v Line: 22
+Info (12128): Elaborating entity "altsyncram" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v Line: 90
+Info (12130): Elaborated megafunction instantiation "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v Line: 90
+Info (12133): Instantiated megafunction "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component" with the following parameter: File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/ram2.v Line: 90
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
@@ -2285,98 +2277,59 @@ Info (12133): Instantiated megafunction "framebuffer:framebuffer|ram2:mem|altsyn
     Info (12134): Parameter "width_b" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_02q1.tdf
-    Info (12023): Found entity 1: altsyncram_02q1 File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf Line: 33
+    Info (12023): Found entity 1: altsyncram_02q1 File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf Line: 33
 Info (12128): Elaborating entity "altsyncram_02q1" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated" File: /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_3na.tdf
-    Info (12023): Found entity 1: decode_3na File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_3na.tdf Line: 22
-Info (12128): Elaborating entity "decode_3na" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|decode_3na:decode2" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf Line: 46
+    Info (12023): Found entity 1: decode_3na File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_3na.tdf Line: 22
+Info (12128): Elaborating entity "decode_3na" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|decode_3na:decode2" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_s2a.tdf
-    Info (12023): Found entity 1: decode_s2a File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_s2a.tdf Line: 22
-Info (12128): Elaborating entity "decode_s2a" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|decode_s2a:rden_decode_b" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf Line: 47
+    Info (12023): Found entity 1: decode_s2a File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_s2a.tdf Line: 22
+Info (12128): Elaborating entity "decode_s2a" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|decode_s2a:rden_decode_b" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_jhb.tdf
-    Info (12023): Found entity 1: mux_jhb File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/mux_jhb.tdf Line: 22
-Info (12128): Elaborating entity "mux_jhb" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|mux_jhb:mux3" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf Line: 49
+    Info (12023): Found entity 1: mux_jhb File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/mux_jhb.tdf Line: 22
+Info (12128): Elaborating entity "mux_jhb" for hierarchy "framebuffer:framebuffer|ram2:mem|altsyncram:altsyncram_component|altsyncram_02q1:auto_generated|mux_jhb:mux3" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_02q1.tdf Line: 49
 Warning (12125): Using design file drawShape.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: drawShape File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 1
-Info (12128): Elaborating entity "drawShape" for hierarchy "drawShape:rectangle" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 266
-Warning (10240): Verilog HDL Always Construct warning at drawShape.v(29): inferring latch(es) for variable "rectangle_x", which holds its previous value in one or more paths through the always construct File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at drawShape.v(29): inferring latch(es) for variable "rectangle_y", which holds its previous value in one or more paths through the always construct File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at drawShape.v(29): inferring latch(es) for variable "rectangle_width", which holds its previous value in one or more paths through the always construct File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at drawShape.v(29): inferring latch(es) for variable "rectangle_height", which holds its previous value in one or more paths through the always construct File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 29
-Info (10041): Inferred latch for "rectangle_height[0]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[1]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[2]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[3]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[4]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[5]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[6]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[7]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[8]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_height[9]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[0]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[1]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[2]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[3]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[4]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[5]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[6]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[7]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[8]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_width[9]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[0]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[1]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[2]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[3]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[4]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[5]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[6]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[7]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[8]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_y[9]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[0]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[1]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[2]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[3]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[4]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[5]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[6]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[7]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[8]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (10041): Inferred latch for "rectangle_x[9]" at drawShape.v(35) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 35
-Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 287
-Warning (10036): Verilog HDL or VHDL warning at vga.v(23): object "VGA_CLK_aux" assigned a value but never read File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 23
-Warning (10230): Verilog HDL assignment warning at vga.v(45): truncated value with size 32 to match size of target (10) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 45
-Warning (10230): Verilog HDL assignment warning at vga.v(47): truncated value with size 32 to match size of target (10) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 47
-Warning (10230): Verilog HDL assignment warning at vga.v(52): truncated value with size 32 to match size of target (10) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 52
-Warning (10230): Verilog HDL assignment warning at vga.v(54): truncated value with size 32 to match size of target (10) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 54
-Warning (10230): Verilog HDL assignment warning at vga.v(70): truncated value with size 32 to match size of target (1) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 70
-Warning (10230): Verilog HDL assignment warning at vga.v(71): truncated value with size 32 to match size of target (1) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 71
-Warning (10230): Verilog HDL assignment warning at vga.v(77): truncated value with size 32 to match size of target (8) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 77
-Warning (10230): Verilog HDL assignment warning at vga.v(78): truncated value with size 32 to match size of target (8) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 78
-Warning (10230): Verilog HDL assignment warning at vga.v(79): truncated value with size 32 to match size of target (8) File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 79
+    Info (12023): Found entity 1: drawShape File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 1
+Info (12128): Elaborating entity "drawShape" for hierarchy "drawShape:rectangle" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 266
+Warning (10036): Verilog HDL or VHDL warning at drawShape.v(17): object "rectangle" assigned a value but never read File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at drawShape.v(32): inferring latch(es) for variable "rectangle_x", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 32
+Warning (10240): Verilog HDL Always Construct warning at drawShape.v(32): inferring latch(es) for variable "rectangle_y", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 32
+Warning (10240): Verilog HDL Always Construct warning at drawShape.v(32): inferring latch(es) for variable "rectangle_width", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 32
+Warning (10240): Verilog HDL Always Construct warning at drawShape.v(32): inferring latch(es) for variable "rectangle_height", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/drawShape.v Line: 32
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 287
+Warning (10036): Verilog HDL or VHDL warning at vga.v(23): object "VGA_CLK_aux" assigned a value but never read File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 23
+Warning (10230): Verilog HDL assignment warning at vga.v(45): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 45
+Warning (10230): Verilog HDL assignment warning at vga.v(47): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 47
+Warning (10230): Verilog HDL assignment warning at vga.v(52): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 52
+Warning (10230): Verilog HDL assignment warning at vga.v(54): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 54
+Warning (10230): Verilog HDL assignment warning at vga.v(70): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 70
+Warning (10230): Verilog HDL assignment warning at vga.v(71): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 71
+Warning (10230): Verilog HDL assignment warning at vga.v(77): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 77
+Warning (10230): Verilog HDL assignment warning at vga.v(78): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 78
+Warning (10230): Verilog HDL assignment warning at vga.v(79): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 79
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ve84.tdf
-    Info (12023): Found entity 1: altsyncram_ve84 File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_ve84.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_ve84 File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/altsyncram_ve84.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
-    Info (12023): Found entity 1: mux_elc File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/mux_elc.tdf Line: 22
+    Info (12023): Found entity 1: mux_elc File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/mux_elc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_vnf.tdf
-    Info (12023): Found entity 1: decode_vnf File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_vnf.tdf Line: 22
+    Info (12023): Found entity 1: decode_vnf File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/decode_vnf.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_rai.tdf
-    Info (12023): Found entity 1: cntr_rai File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_rai.tdf Line: 27
+    Info (12023): Found entity 1: cntr_rai File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_rai.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_g9c.tdf
-    Info (12023): Found entity 1: cmpr_g9c File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_g9c.tdf Line: 22
+    Info (12023): Found entity 1: cmpr_g9c File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_g9c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4vi.tdf
-    Info (12023): Found entity 1: cntr_4vi File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_4vi.tdf Line: 25
+    Info (12023): Found entity 1: cntr_4vi File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_4vi.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_09i.tdf
-    Info (12023): Found entity 1: cntr_09i File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_09i.tdf Line: 27
+    Info (12023): Found entity 1: cntr_09i File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_09i.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_c9c.tdf
-    Info (12023): Found entity 1: cmpr_c9c File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_c9c.tdf Line: 22
+    Info (12023): Found entity 1: cmpr_c9c File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_c9c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kri.tdf
-    Info (12023): Found entity 1: cntr_kri File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_kri.tdf Line: 27
+    Info (12023): Found entity 1: cntr_kri File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cntr_kri.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_99c.tdf
-    Info (12023): Found entity 1: cmpr_99c File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_99c.tdf Line: 22
+    Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.10.17:32:04 Progress: Loading sld1350ec5e/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.11.21:22:33 Progress: Loading sld1350ec5e/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2387,71 +2340,87 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld1350ec5e/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/ip/sld1350ec5e/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[24]" and its non-tri-state driver. File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[31]" and its non-tri-state driver. File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[24]" and its non-tri-state driver. File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[31]" and its non-tri-state driver. File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
 Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "GPIO_1[25]" is fed by GND File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+    Warning (13033): The pin "GPIO_1[25]" is fed by GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
 Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "GPIO_1[17]" to the node "GPIO_1[17]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "GPIO_1[16]" to the node "GPIO_1[16]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "GPIO_1[17]" to the node "GPIO_1[17]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "GPIO_1[16]" to the node "GPIO_1[16]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GPIO_1[24]~synth" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-    Warning (13010): Node "GPIO_1[31]~synth" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+    Warning (13010): Node "GPIO_1[24]~synth" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+    Warning (13010): Node "GPIO_1[31]~synth" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 12
-    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 13
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 9
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 9
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 9
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 9
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 9
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 9
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 9
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 9
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 11
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 11
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 11
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 11
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 11
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 11
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 11
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 11
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 12
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 13
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Warning (14632): Output pin "pre_syn.bp.camera_D_7_" driven by bidirectional pin "GPIO_1[16]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_D_6_" driven by bidirectional pin "GPIO_1[17]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_D_5_" driven by bidirectional pin "GPIO_1[18]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_D_4_" driven by bidirectional pin "GPIO_1[19]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_D_3_" driven by bidirectional pin "GPIO_1[20]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_D_2_" driven by bidirectional pin "GPIO_1[21]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_D_1_" driven by bidirectional pin "GPIO_1[22]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_D_0_" driven by bidirectional pin "GPIO_1[23]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_VSYNC" driven by bidirectional pin "GPIO_1[28]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_HREF" driven by bidirectional pin "GPIO_1[29]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
-Warning (14632): Output pin "pre_syn.bp.camera_PCLK" driven by bidirectional pin "GPIO_1[30]" cannot be tri-stated File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_D_7_" driven by bidirectional pin "GPIO_1[16]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_D_6_" driven by bidirectional pin "GPIO_1[17]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_D_5_" driven by bidirectional pin "GPIO_1[18]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_D_4_" driven by bidirectional pin "GPIO_1[19]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_D_3_" driven by bidirectional pin "GPIO_1[20]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_D_2_" driven by bidirectional pin "GPIO_1[21]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_D_1_" driven by bidirectional pin "GPIO_1[22]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_D_0_" driven by bidirectional pin "GPIO_1[23]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_VSYNC" driven by bidirectional pin "GPIO_1[28]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_HREF" driven by bidirectional pin "GPIO_1[29]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
+Warning (14632): Output pin "pre_syn.bp.camera_PCLK" driven by bidirectional pin "GPIO_1[30]" cannot be tri-stated File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 5
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/output_files/top1.map.smsg
+Info (144001): Generated suppressed messages file /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/output_files/top1.map.smsg
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 399 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 18 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
-Info (21057): Implemented 3973 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 3
+Info (21057): Implemented 3911 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 36 bidirectional pins
-    Info (21061): Implemented 3395 logic cells
+    Info (21061): Implemented 3333 logic cells
     Info (21064): Implemented 487 RAM segments
     Info (21065): Implemented 2 PLLs
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
-    Info: Peak virtual memory: 1466 megabytes
-    Info: Processing ended: Mon Jun 10 17:32:11 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 81 warnings
+    Info: Peak virtual memory: 1464 megabytes
+    Info: Processing ended: Tue Jun 11 21:22:39 2024
     Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:31
 
@@ -2459,6 +2428,6 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/ec2021-fra/ra232076/2024s1-mc613-projeto-seguimores-do-rodolfo/output_files/top1.map.smsg.
+The suppressed messages can be found in /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/output_files/top1.map.smsg.
 
 

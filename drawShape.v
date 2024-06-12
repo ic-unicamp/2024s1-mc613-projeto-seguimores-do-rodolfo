@@ -22,9 +22,12 @@ always @(x_pos, y_pos, rectangle_x, rectangle_y, rectangle_width, rectangle_heig
 end
 
 // Lógica para selecionar a cor de uma região 
-assign R_in = rectangle && ((red_flag && x_pos < 160) || (yellow_flag && x_pos >= 480)) ? 8'hFF : Y_out;
+/* assign R_in = rectangle && ((red_flag && x_pos < 160) || (yellow_flag && x_pos >= 480)) ? 8'hFF : Y_out;
 assign G_in = rectangle && ((green_flag && x_pos >= 160 && x_pos < 320) || (yellow_flag && x_pos >= 480)) ? 8'hFF : Y_out;
-assign B_in = rectangle && (blue_flag && x_pos >= 320 && x_pos < 480) ? 8'hFF : Y_out;
+assign B_in = rectangle && (blue_flag && x_pos >= 320 && x_pos < 480) ? 8'hFF : Y_out; */
+assign R_in = 0;
+assign G_in = Y_out;
+assign B_in = 0;
 
 always @(red_flag, green_flag, blue_flag, yellow_flag) begin
         if (red_flag) begin

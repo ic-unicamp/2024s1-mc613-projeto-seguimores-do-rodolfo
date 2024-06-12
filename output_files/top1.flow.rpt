@@ -1,5 +1,5 @@
 Flow report for top1
-Mon Jun 10 17:33:16 2024
+Tue Jun 11 21:23:41 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Jun 10 17:33:16 2024       ;
+; Flow Status                     ; Successful - Tue Jun 11 21:23:41 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; top1                                        ;
 ; Top-level Entity Name           ; top1                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,127 / 32,070 ( 4 % )                      ;
-; Total registers                 ; 2849                                        ;
+; Logic utilization (in ALMs)     ; 1,120 / 32,070 ( 3 % )                      ;
+; Total registers                 ; 2875                                        ;
 ; Total pins                      ; 76 / 457 ( 17 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,481,024 / 4,065,280 ( 61 % )              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/10/2024 17:31:56 ;
+; Start date & time ; 06/11/2024 21:22:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top1                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 31239359189413.171805151609205                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 31239359189399.171815174428398                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ; --            ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ; <None>        ; --          ; --               ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ; --            ; --          ; eda_simulation   ;
@@ -138,26 +138,26 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 1448 MB             ; 00:00:29                           ;
-; Fitter                    ; 00:00:40     ; 1.4                     ; 3318 MB             ; 00:03:10                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 1236 MB             ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:11     ; 2.2                     ; 1672 MB             ; 00:00:22                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 1540 MB             ; 00:00:03                           ;
-; Total                     ; 00:01:12     ; --                      ; --                  ; 00:04:09                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 1445 MB             ; 00:00:30                           ;
+; Fitter                    ; 00:00:40     ; 1.5                     ; 3362 MB             ; 00:03:04                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 1237 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:11     ; 2.1                     ; 1677 MB             ; 00:00:23                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 1538 MB             ; 00:00:03                           ;
+; Total                     ; 00:01:12     ; --                      ; --                  ; 00:04:05                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                 ;
-+---------------------------+------------------------+-------------+-------------+----------------+
-; Module Name               ; Machine Hostname       ; OS Name     ; OS Version  ; Processor type ;
-+---------------------------+------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis      ; odie.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter                    ; odie.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler                 ; odie.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; TimeQuest Timing Analyzer ; odie.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer        ; odie.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+---------------------------+------------------------+-------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                      ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
+; Module Name               ; Machine Hostname            ; OS Name     ; OS Version  ; Processor type ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis      ; rabugento.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter                    ; rabugento.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler                 ; rabugento.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; TimeQuest Timing Analyzer ; rabugento.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer        ; rabugento.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
 
 
 ------------

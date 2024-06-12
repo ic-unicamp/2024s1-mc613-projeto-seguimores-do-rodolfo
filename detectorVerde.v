@@ -18,8 +18,8 @@ module detectorVerde(
 );
 
 
-parameter Y_MIN = 8'd90;
-parameter Y_MAX = 8'd115;
+parameter Y_MIN = 8'd140;
+parameter Y_MAX = 8'd200;
 
 parameter Cb_MIN = 8'd130; //não estamos utilizando por enquanto 
 parameter Cb_MAX = 8'd150;
@@ -28,13 +28,13 @@ parameter Cr_MIN = 8'd125;
 parameter Cr_MAX = 8'd160;
 
 parameter R_MIN = 8'd0;
-parameter R_MAX = 8'd70;
+parameter R_MAX = 8'd10;
 
-parameter G_MIN = 8'd75;
+parameter G_MIN = 8'd200;
 parameter G_MAX = 8'd255;
 
 parameter B_MIN = 8'd0;
-parameter B_MAX = 8'd220;
+parameter B_MAX = 8'd10;
 
 reg signed [15:0] Y_signed, Cb_signed, Cr_signed,R_signed,G_signed,B_signed;
 
@@ -72,14 +72,16 @@ always @(posedge PCLK) begin
         if(B_out > B_MIN && B_out < B_MAX) flag_B <=1; 
         else flag_B <=0;
 
-        if( (Y > Y_MIN  && Y < Y_MAX ) && (Cr > Cr_MIN && Cr <Cr_MAX) && (G_out > G_MIN && G_out < G_MAX) && (R_out > R_MIN && R_out < R_MAX) && (B_out > B_MIN && B_out < B_MAX) ) begin
+        if( (Cr[7]==1) && (Cb[7]==1) && (Y > Y_MIN  && Y < Y_MAX ) /*&& (Cr > Cr_MIN && Cr <Cr_MAX) && (G_out > G_MIN && G_out < G_MAX) && (R_out > R_MIN && R_out < R_MAX) && (B_out > B_MIN && B_out < B_MAX) */ ) begin
             eh_verde <= 1;
             //Y_out = 8'b0;
-            Y_dec = {2'b11, Y[7:2]};
+/*            Y_dec = {2'b11, Y[7:2]}; */
+            Y_dec = 255;
             //Y_dec ={2'b11, Y[7:2]};
         end else begin
             eh_verde <= 0; 
-            Y_dec ={2'b00, Y[7:2]};
+            Y_dec = Y;
+/*             Y_dec ={2'b00, Y[7:2]}; */
         end 
     end else eh_verde <= 0; 
 end

@@ -239,6 +239,18 @@ colorTracker blue_tracker(
     .y(next_y), 
     .regiao_detectada(blue_flag)
 );
+wire en_regions; 
+wire [3:0] green_region; 
+suavizador suavizador_regioes(
+    .PCLK(PCLK),
+    .VSYNC(VSYNC), 
+    .red(red_flag),
+    .green(green_flag),
+    .yellow(yellow_flag),
+    .blue(blue_flag),
+    .en(en_regions),
+    .green_region(green_region)
+);
 
 framebuffer framebuffer(
   .CLOCK_25(CLOCK_25),
@@ -253,13 +265,14 @@ framebuffer framebuffer(
 wire [7:0] R_in, B_in, G_in;
 
 drawShape rectangle(
+  .en_regions(en_regions),
   .Y_out(Y_out),
   .x_pos(next_x),
   .y_pos(next_y),                  
-  .red_flag(red_flag), 
-  .green_flag(0),
-  .yellow_flag(0),
-  .blue_flag(0),
+  .red_flag(green_region[0]), 
+  .green_flag(green_region[1]),
+  .yellow_flag(green_region[2]),
+  .blue_flag(green_region[3]),
   .R_in(R_in), 
   .G_in(G_in), 
   .B_in(B_in)

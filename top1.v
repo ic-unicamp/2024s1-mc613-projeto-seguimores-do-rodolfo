@@ -22,7 +22,7 @@ wire CLOCK_24, CLOCK_25;
 wire [7:0] y_pos_ptr1;
 wire [3:0] command_out_ptr1;*/
 
-
+//Divisores de frequência
 wire rst = !SW[0];
 PLL clk_24(
   .refclk(CLOCK_50),
@@ -77,7 +77,7 @@ pll_vga pll_vga_inst(
   reg [7:0] Y_enter; 
   wire [7:0] Cb, Cr; 
   wire enable_d; 
-
+//Pinagem 
   //assign GPIO_1[26] = SDIOC;
   //assign SDIOC = 1'bz;
   assign GPIO_1[31] = XCLK;
@@ -116,7 +116,7 @@ pll_vga pll_vga_inst(
   parameter REGION_WIDTH = WIDTH / 4;
 
 assign contador_V = next_y * 10'd640 + next_x;
-
+//Módulo de aquisição de dados da câmera (veja em detalhes no lab 07)
 camera camera(
   // inputs
   .CLOCK_24(CLOCK_24),
@@ -139,6 +139,7 @@ camera camera(
   .CONTADOR_C(contador_C),
   .PCLK(PCLK)
 );
+//Detector de pixels verde para o primeiro Y
 detectorVerde dec(
   .PCLK(PCLK), 
   .e_pix(e_pix),
@@ -153,7 +154,7 @@ detectorVerde dec(
   .eh_verde(verde), 
   .Y_dec(Y_verde)
 );
-
+//Detector de pixels verde para o segundo Y
 detectorVerde dec_verde(
   .PCLK(PCLK), 
   .e_pix(e_pix),
@@ -186,6 +187,7 @@ always @(posedge PCLK) begin //Ajustado o conteúdo gravado na RAM
   end
 end 
 wire [9:0] centroX, centroY;
+//Módulo para calcular o centro de "massa" (concentração de pixels verdes)
 green_mass_center green_center(
     .clk(CLOCK_24),
     .eh_verde(verde_aux),
@@ -196,7 +198,7 @@ green_mass_center green_center(
     .centroY(centroY)
 );
 
-
+//Rastreador da luva verde na seção da peça vermelha 
 colorTracker red_tracker(
     .clk(CLOCK_24),
     .SW(SW),
@@ -210,7 +212,7 @@ colorTracker red_tracker(
     .y(next_y), 
     .regiao_detectada(red_flag)
 );
-
+//Rastreador da luva verde na seção da peça verde
 colorTracker green_tracker(
     .clk(CLOCK_24),
     .SW(SW),
@@ -224,7 +226,7 @@ colorTracker green_tracker(
     .y(next_y), 
     .regiao_detectada(green_flag)
 );
-
+//Rastreador da luva verde na seção da peça amarela
 colorTracker yellow_tracker(
     .clk(CLOCK_24),
     .SW(SW),
@@ -238,7 +240,7 @@ colorTracker yellow_tracker(
     .y(next_y), 
     .regiao_detectada(yellow_flag)
 );
-
+//Rastreador da luva verde na seção da peça azul
 colorTracker blue_tracker(
     .clk(CLOCK_24),
     .SW(SW),
@@ -252,7 +254,7 @@ colorTracker blue_tracker(
     .y(next_y), 
     .regiao_detectada(blue_flag)
 );
-
+//Framebuffer para escrever/ler as aquisições da câmera
 framebuffer framebuffer(
   .CLOCK_25(CLOCK_25),
   .CLOCK_24(CLOCK_24),
@@ -264,27 +266,10 @@ framebuffer framebuffer(
 );
 
 
-wire red_rec, green_rec;
-drawShape red_rectangle(
-    .clk(CLOCK_24), 
-    .x_pos(next_x),
-    .y_pos(next_y),                 
-    .flag(red_flag),     
-    .reg_min(0), 
-
-    .rectangle(red_rec)
-); 
-drawShape green_rectangle(
-    .clk(CLOCK_24), 
-    .x_pos(next_x),
-    .y_pos(next_y),                 
-    .flag(green_flag),     
-    .reg_min(10'd160), 
-
-    .rectangle(green_rec)
-); 
 wire [3:0] green_region;
 wire centro_en;
+
+//Módulo para suavizar o resultado das flags das regiões 
 suavizador suavizador_regions(
     .PCLK(PCLK),
     .VSYNC(VSYNC), 
@@ -302,9 +287,10 @@ assign B_in = (centro_en) && ( green_region[3] && next_x > 480 && next_x < 639 )
 assign R_in = ((centroX < 161 && next_x < 161 ) ||(centroX > 320 && centroX < 479 && next_x > 320 && next_x < 479))? 8'hFF : Y_out;
 assign G_in = ((centroX > 160  && centroX < 321 && next_x > 160  && next_x < 321) || (centroX > 320 && centroX < 479 && next_x > 320 && next_x < 479)) ? 8'hFF : Y_out;
 assign B_in = (centroX > 480 && centroX< 639 && next_x > 480 && next_x < 639 ) ? 8'hFF : Y_out;
-/*assign R_in = (/*(red_flag && next_x < 161) || (yellow_flag && next_x > 0 && next_x < 639)) ? 8'hFF : Y_out;*/ 
-/*assign G_in = ((green_flag && next_x >0 && next_x < 639) || (yellow_flag && next_x > 0 && next_x < 639)) ? 8'hFF: Y_out;*/
-/*assign B_in = (blue_flag && next_x > 480 && next_x < 639) ?0: Y_out;*/
+
+/*assign R_in = (/*(red_flag && next_x < 161) || (yellow_flag && next_x > 320 && next_x < 479) ? 8'hFF : Y_out;*/ 
+/*assign G_in = ((green_flag && next_x > 160  && next_x < 321) || (yellow_flag && next_x > 320 && next_x < 479)) ? 8'hFF: Y_out;*/
+/*assign B_in = (blue_flag && next_x > 480 && next_x < 639) ? 8'hFF : Y_out;*/
 
 
 vga vga(

@@ -40,7 +40,7 @@ parameter B_MAX = 8'd10;
 
 reg signed [15:0] Y_signed, Cb_signed, Cr_signed,R_signed,G_signed,B_signed;
 
-//reg signed [7:0] G_max, G_min = 8'd130, R_max= 8'd90, R_min, B_max= 8'd180, B_min; 
+
 
 always @(posedge PCLK) begin 
     if(e_pix ) begin 
@@ -65,7 +65,7 @@ always @(posedge PCLK) begin
         /*Debug para calibração da câmera */ 
         if (Y > Y_MIN  && Y < Y_MAX ) flag_Y <=1; 
         else flag_Y <=0; 
-        if( Cb > 140 &&  Cb < 160 ) flag_Cr <=1; 
+        if(Cr < -40 && Cr > -120) flag_Cr <=1; 
         else flag_Cr <=0;
         if((B_out-G_out < 80) && (B_out-G_out>0))  flag_G <=1; 
         else flag_G <=0;
@@ -77,14 +77,13 @@ always @(posedge PCLK) begin
         if(( Cb < -85 && Cb >-110) && (Cr < -40 && Cr > -120)) begin
             /*(Cr[7]==1) && (Cb[7]==1)  && (Y > Y_MIN  && Y < Y_MAX ) && (B_out-G_out < 80) && (B_out-G_out>0) && (Cr > Cr_MIN && Cr <Cr_MAX) && (G_out > G_MIN && G_out < G_MAX) && (R_out > R_MIN && R_out < R_MAX) && (B_out > B_MIN && B_out < B_MAX) */ 
             eh_verde <= 1;
-            //Y_out = 8'b0;
-/*            Y_dec = {2'b11, Y[7:2]}; */
+
             Y_dec = 255;
-            //Y_dec ={2'b11, Y[7:2]};
+
         end else begin
             eh_verde <= 0; 
             Y_dec = Y;
-/*             Y_dec ={2'b00, Y[7:2]}; */
+
         end 
     end else eh_verde <= 0; 
 end

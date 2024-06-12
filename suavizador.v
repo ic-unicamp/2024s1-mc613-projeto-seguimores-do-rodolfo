@@ -1,4 +1,4 @@
-suavizador(
+module suavizador(
     input PCLK,
     input VSYNC, 
     input red,

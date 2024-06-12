@@ -4,6 +4,8 @@ module detectorVerde(
     input [7:0] Y,                  // Byte Y output    
     input signed [7:0] Cb,     // Byte Y output  
     input signed [7:0] Cr,     // Byte Y output   
+    input [9:0] x,
+    input [9:0] y,
 
     output reg eh_verde, 
     output reg flag_Y, 
@@ -18,8 +20,8 @@ module detectorVerde(
 );
 
 
-parameter Y_MIN = 8'd140;
-parameter Y_MAX = 8'd200;
+parameter Y_MIN = 8'd60;
+parameter Y_MAX = 8'd180;
 
 parameter Cb_MIN = 8'd130; //não estamos utilizando por enquanto 
 parameter Cb_MAX = 8'd150;
@@ -41,7 +43,7 @@ reg signed [15:0] Y_signed, Cb_signed, Cr_signed,R_signed,G_signed,B_signed;
 //reg signed [7:0] G_max, G_min = 8'd130, R_max= 8'd90, R_min, B_max= 8'd180, B_min; 
 
 always @(posedge PCLK) begin 
-    if(e_pix) begin 
+    if(e_pix ) begin 
 
         Y_signed = Y;
         Cb_signed = Cb - 128;
@@ -63,21 +65,22 @@ always @(posedge PCLK) begin
         /*Debug para calibração da câmera */ 
         if (Y > Y_MIN  && Y < Y_MAX ) flag_Y <=1; 
         else flag_Y <=0; 
-        if(Cr > Cr_MIN && Cr < Cr_MAX) flag_Cr <=1; 
+        if( Cb > 140 &&  Cb < 160 ) flag_Cr <=1; 
         else flag_Cr <=0;
-        if(G_out > G_MIN && G_out < G_MAX)  flag_G <=1; 
+        if((B_out-G_out < 80) && (B_out-G_out>0))  flag_G <=1; 
         else flag_G <=0;
         if(R_out > R_MIN && R_out < R_MAX) flag_R <=1; 
         else flag_R <=0;
         if(B_out > B_MIN && B_out < B_MAX) flag_B <=1; 
         else flag_B <=0;
 
-        if( (Cr[7]==1) && (Cb[7]==1) && (Y > Y_MIN  && Y < Y_MAX ) /*&& (Cr > Cr_MIN && Cr <Cr_MAX) && (G_out > G_MIN && G_out < G_MAX) && (R_out > R_MIN && R_out < R_MAX) && (B_out > B_MIN && B_out < B_MAX) */ ) begin
+        if(( Cb < -85 && Cb >-110) && (Cr < -40 && Cr > -120)) begin
+            /*(Cr[7]==1) && (Cb[7]==1)  && (Y > Y_MIN  && Y < Y_MAX ) && (B_out-G_out < 80) && (B_out-G_out>0) && (Cr > Cr_MIN && Cr <Cr_MAX) && (G_out > G_MIN && G_out < G_MAX) && (R_out > R_MIN && R_out < R_MAX) && (B_out > B_MIN && B_out < B_MAX) */ 
             eh_verde <= 1;
             //Y_out = 8'b0;
 /*            Y_dec = {2'b11, Y[7:2]}; */
-            Y_dec = 255;
-            //Y_dec ={2'b11, Y[7:2]};
+            //Y_dec = 255;
+            Y_dec ={2'b11, Y[7:2]};
         end else begin
             eh_verde <= 0; 
             Y_dec = Y;

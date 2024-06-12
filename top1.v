@@ -142,6 +142,8 @@ camera camera(
 detectorVerde dec(
   .PCLK(PCLK), 
   .e_pix(e_pix),
+  .x(next_x),
+  .y(next_y),
   .Y(Y_in),
   .Cb(Cb),
   .Cr(Cr),
@@ -219,7 +221,7 @@ colorTracker yellow_tracker(
     .G(G_aux),
     .B(B_aux),
     .reg_min(10'd320),
-    .reg_max(10'd481),
+    .reg_max(10'd479),
     .eh_verde(verde_aux),
     .x(next_x), 
     .y(next_y), 
@@ -233,23 +235,11 @@ colorTracker blue_tracker(
     .G(G_aux),
     .B(B_aux),
     .reg_min(10'd480),
-    .reg_max(10'd637),
+    .reg_max(10'd639),
     .eh_verde(verde_aux),
     .x(next_x), 
     .y(next_y), 
     .regiao_detectada(blue_flag)
-);
-wire en_regions; 
-wire [3:0] green_region; 
-suavizador suavizador_regioes(
-    .PCLK(PCLK),
-    .VSYNC(VSYNC), 
-    .red(red_flag),
-    .green(green_flag),
-    .yellow(yellow_flag),
-    .blue(blue_flag),
-    .en(en_regions),
-    .green_region(green_region)
 );
 
 framebuffer framebuffer(
@@ -265,14 +255,13 @@ framebuffer framebuffer(
 wire [7:0] R_in, B_in, G_in;
 
 drawShape rectangle(
-  .en_regions(en_regions),
   .Y_out(Y_out),
   .x_pos(next_x),
   .y_pos(next_y),                  
-  .red_flag(green_region[0]), 
-  .green_flag(green_region[1]),
-  .yellow_flag(green_region[2]),
-  .blue_flag(green_region[3]),
+  .red_flag(red_flag), 
+  .green_flag(0),
+  .yellow_flag(0),
+  .blue_flag(0),
   .R_in(R_in), 
   .G_in(G_in), 
   .B_in(B_in)

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top1
-Wed Jun 12 08:19:45 2024
+Wed Jun 12 15:20:04 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun 12 08:19:44 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 12 15:20:04 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; top1                                        ;
 ; Top-level Entity Name           ; top1                                        ;
@@ -1368,7 +1368,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jun 12 08:19:28 2024
+    Info: Processing started: Wed Jun 12 15:19:47 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top1 -c top1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1390,7 +1390,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file detecto
     Info (12023): Found entity 1: detectorVerde File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/detectorVerde.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.v
     Info (12023): Found entity 1: vga File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 1
-Warning (10263): Verilog HDL Event Control warning at top1.v(306): event expression contains "|" or "||" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 306
+Warning (10263): Verilog HDL Event Control warning at top1.v(313): event expression contains "|" or "||" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 313
 Info (12021): Found 1 design units, including 1 entities, in source file top1.v
     Info (12023): Found entity 1: top1 File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file framebuffer.v
@@ -1408,56 +1408,56 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll_vga
 Info (12021): Found 1 design units, including 1 entities, in source file pll_vga/pll_vga_0002.v
     Info (12023): Found entity 1: pll_vga_0002 File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 2
 Warning (10236): Verilog HDL Implicit Net warning at top1.v(33): created implicit net for "ponto" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(121): created implicit net for "ponto1" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 121
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(124): created implicit net for "trocar1" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 124
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(137): created implicit net for "ponto2" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 137
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(140): created implicit net for "trocar2" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 140
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(153): created implicit net for "ponto3" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 153
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(156): created implicit net for "trocar3" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 156
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(169): created implicit net for "ponto4" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 169
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(172): created implicit net for "trocar4" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 172
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(185): created implicit net for "ponto5" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 185
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(188): created implicit net for "trocar5" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 188
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(201): created implicit net for "ponto6" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 201
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(204): created implicit net for "trocar6" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 204
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(217): created implicit net for "ponto7" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 217
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(220): created implicit net for "trocar7" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 220
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(233): created implicit net for "ponto8" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 233
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(236): created implicit net for "trocar8" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 236
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(244): created implicit net for "fim_de_jogo" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 244
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(283): created implicit net for "D" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 283
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(284): created implicit net for "RESET" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 284
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(286): created implicit net for "PWDN" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 286
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(288): created implicit net for "XCLK" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 288
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(290): created implicit net for "enable_d" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 290
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(291): created implicit net for "Y_in" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 291
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(292): created implicit net for "Y_2" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 292
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(293): created implicit net for "Cb" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 293
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(294): created implicit net for "Cr" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 294
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(295): created implicit net for "e_pix" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 295
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(296): created implicit net for "VSYNC" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 296
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(297): created implicit net for "HREF" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 297
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(298): created implicit net for "contador_C" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 298
-Warning (10236): Verilog HDL Implicit Net warning at top1.v(299): created implicit net for "PCLK" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 299
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(128): created implicit net for "ponto1" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 128
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(131): created implicit net for "trocar1" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 131
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(144): created implicit net for "ponto2" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 144
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(147): created implicit net for "trocar2" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(160): created implicit net for "ponto3" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 160
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(163): created implicit net for "trocar3" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 163
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(176): created implicit net for "ponto4" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 176
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(179): created implicit net for "trocar4" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 179
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(192): created implicit net for "ponto5" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 192
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(195): created implicit net for "trocar5" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 195
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(208): created implicit net for "ponto6" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 208
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(211): created implicit net for "trocar6" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 211
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(224): created implicit net for "ponto7" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 224
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(227): created implicit net for "trocar7" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 227
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(240): created implicit net for "ponto8" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 240
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(243): created implicit net for "trocar8" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 243
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(251): created implicit net for "fim_de_jogo" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 251
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(290): created implicit net for "D" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 290
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(291): created implicit net for "RESET" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 291
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(293): created implicit net for "PWDN" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 293
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(295): created implicit net for "XCLK" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 295
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(297): created implicit net for "enable_d" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 297
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(298): created implicit net for "Y_in" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 298
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(299): created implicit net for "Y_2" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 299
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(300): created implicit net for "Cb" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 300
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(301): created implicit net for "Cr" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 301
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(302): created implicit net for "e_pix" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 302
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(303): created implicit net for "VSYNC" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 303
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(304): created implicit net for "HREF" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 304
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(305): created implicit net for "contador_C" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 305
+Warning (10236): Verilog HDL Implicit Net warning at top1.v(306): created implicit net for "PCLK" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 306
 Info (12127): Elaborating entity "top1" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top1.v(304): object "max_score_aux" assigned a value but never read File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 304
-Warning (10230): Verilog HDL assignment warning at top1.v(308): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 308
-Warning (10230): Verilog HDL assignment warning at top1.v(323): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 323
-Warning (10199): Verilog HDL Case Statement warning at top1.v(325): case item expression never matches the case expression File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 325
-Info (12128): Elaborating entity "placar" for hierarchy "placar:placar" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 108
+Warning (10036): Verilog HDL or VHDL warning at top1.v(311): object "max_score_aux" assigned a value but never read File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 311
+Warning (10230): Verilog HDL assignment warning at top1.v(315): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 315
+Warning (10230): Verilog HDL assignment warning at top1.v(330): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 330
+Warning (10199): Verilog HDL Case Statement warning at top1.v(332): case item expression never matches the case expression File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 332
+Info (12128): Elaborating entity "placar" for hierarchy "placar:placar" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 115
 Warning (10230): Verilog HDL assignment warning at placar.v(36): truncated value with size 5 to match size of target (4) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/placar.v Line: 36
 Info (12128): Elaborating entity "conversorBin7Seg" for hierarchy "placar:placar|conversorBin7Seg:conv0" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/placar.v Line: 20
 Info (12128): Elaborating entity "bin2bcd" for hierarchy "placar:placar|bin2bcd:acum" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/placar.v Line: 28
 Warning (12125): Using design file pattern.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: pattern File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 1
-Info (12128): Elaborating entity "pattern" for hierarchy "pattern:ptr1" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 125
+Info (12128): Elaborating entity "pattern" for hierarchy "pattern:ptr1" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 132
 Warning (10230): Verilog HDL assignment warning at pattern.v(34): truncated value with size 32 to match size of target (28) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 34
 Warning (10230): Verilog HDL assignment warning at pattern.v(58): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 58
 Warning (10034): Output port "command_out" at pattern.v(11) has no driver File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pattern.v Line: 11
-Info (12128): Elaborating entity "gerenciador_de_patterns" for hierarchy "gerenciador_de_patterns:lista" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 246
+Info (12128): Elaborating entity "gerenciador_de_patterns" for hierarchy "gerenciador_de_patterns:lista" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 253
 Warning (10230): Verilog HDL assignment warning at gerenciador_de_pattenrns.v(232): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/gerenciador_de_pattenrns.v Line: 232
 Warning (10030): Net "lista_de_comandos[204..203]" at gerenciador_de_pattenrns.v(12) has no driver or initial value, using a default initial value '0' File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/gerenciador_de_pattenrns.v Line: 12
-Info (12128): Elaborating entity "pll_vga" for hierarchy "pll_vga:pll_vga_inst" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 252
+Info (12128): Elaborating entity "pll_vga" for hierarchy "pll_vga:pll_vga_inst" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 259
 Info (12128): Elaborating entity "pll_vga_0002" for hierarchy "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga.v Line: 19
 Info (12128): Elaborating entity "altera_pll" for hierarchy "pll_vga:pll_vga_inst|pll_vga_0002:pll_vga_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/pll_vga/pll_vga_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -1523,7 +1523,7 @@ Info (12133): Instantiated megafunction "pll_vga:pll_vga_inst|pll_vga_0002:pll_v
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 277
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 284
 Warning (10036): Verilog HDL or VHDL warning at vga.v(24): object "VGA_CLK_aux" assigned a value but never read File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 24
 Warning (10230): Verilog HDL assignment warning at vga.v(46): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 46
 Warning (10230): Verilog HDL assignment warning at vga.v(48): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 48
@@ -1534,7 +1534,7 @@ Warning (10230): Verilog HDL assignment warning at vga.v(72): truncated value wi
 Warning (10230): Verilog HDL assignment warning at vga.v(78): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 78
 Warning (10230): Verilog HDL assignment warning at vga.v(79): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 79
 Warning (10230): Verilog HDL assignment warning at vga.v(80): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/vga.v Line: 80
-Info (12128): Elaborating entity "camera" for hierarchy "camera:camera" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 300
+Info (12128): Elaborating entity "camera" for hierarchy "camera:camera" File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/top1.v Line: 307
 Warning (10230): Verilog HDL assignment warning at camera.v(55): truncated value with size 32 to match size of target (2) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 55
 Warning (10230): Verilog HDL assignment warning at camera.v(60): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 60
 Warning (10230): Verilog HDL assignment warning at camera.v(67): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/camera.v Line: 67
@@ -1560,7 +1560,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.12.08:19:37 Progress: Loading sld1350ec5e/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.12.15:19:56 Progress: Loading sld1350ec5e/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1636,10 +1636,10 @@ Info (21057): Implemented 2053 device resources after synthesis - the final reso
     Info (21064): Implemented 36 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 99 warnings
-    Info: Peak virtual memory: 1377 megabytes
-    Info: Processing ended: Wed Jun 12 08:19:45 2024
+    Info: Peak virtual memory: 1380 megabytes
+    Info: Processing ended: Wed Jun 12 15:20:04 2024
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+

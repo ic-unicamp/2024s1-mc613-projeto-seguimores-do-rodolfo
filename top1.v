@@ -97,6 +97,13 @@ assign B_in = (((next_y > 450) && (next_y <= 458))
 
 // 
 
+/* reg[15:0] count;
+
+always @ (posedge CLOCK_25) begin
+  if (ponto) count = 1_000_000;
+  if (count > 0) count = count - 1;
+end
+ */
 placar placar(
   .display(display),
   .HEX0(HEX0),

@@ -1,5 +1,5 @@
 Fitter report for top1
-Wed Jun 12 08:20:10 2024
+Wed Jun 12 15:20:32 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Jun 12 08:20:10 2024       ;
+; Fitter Status                   ; Successful - Wed Jun 12 15:20:32 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; top1                                        ;
 ; Top-level Entity Name           ; top1                                        ;
@@ -155,18 +155,18 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.19        ;
+; Average used               ; 1.18        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.3%      ;
-;     Processor 3            ;   2.2%      ;
-;     Processor 4            ;   2.1%      ;
-;     Processor 5            ;   1.6%      ;
-;     Processor 6            ;   1.6%      ;
-;     Processor 7            ;   1.6%      ;
-;     Processor 8            ;   1.6%      ;
+;     Processor 2            ;   2.1%      ;
+;     Processor 3            ;   2.0%      ;
+;     Processor 4            ;   2.0%      ;
+;     Processor 5            ;   1.5%      ;
+;     Processor 6            ;   1.5%      ;
+;     Processor 7            ;   1.5%      ;
+;     Processor 8            ;   1.5%      ;
 ;     Processor 9            ;   1.5%      ;
 ;     Processor 10           ;   1.5%      ;
 ;     Processor 11           ;   1.5%      ;
@@ -2956,19 +2956,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 1.06 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.11 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /home/ec2022/ra260370/Documents/MC613/2024s1-mc613-projeto-seguimores-do-rodolfo/output_files/top1.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 184 warnings
-    Info: Peak virtual memory: 3280 megabytes
-    Info: Processing ended: Wed Jun 12 08:20:11 2024
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:01:55
+    Info: Peak virtual memory: 3286 megabytes
+    Info: Processing ended: Wed Jun 12 15:20:33 2024
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:02:02
 
 
 +----------------------------+

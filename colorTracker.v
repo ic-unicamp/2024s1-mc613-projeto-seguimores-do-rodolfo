@@ -17,9 +17,9 @@ module colorTracker (
 parameter WIDTH = 640;
 parameter HEIGHT = 480;
 parameter REGION_WIDTH = WIDTH / 4;
-parameter THRESHOLD = 20; // Limiar para o número de pixels verdes na região 
+parameter THRESHOLD = 10; // Limiar para o número de pixels verdes 
 //parameter THRESHOLD_X = 160; // Limiar para o número de pixels verdes na linha
-reg [15:0] green_count; // Contadores para cada região
+reg [7:0] green_count; // Contadores para cada região
 
 reg[4:0] count; // Contador de pixels verdes na coluna
 //reg [7:0] green_x;
@@ -36,11 +36,9 @@ reg[4:0] count; // Contador de pixels verdes na coluna
             if(count == 5'b10100) begin 
                 green_count <= 0; //não encontramos pixels verdes na coluna
                 count <= 0;
-            end else if(eh_verde) begin 
-                if(x == reg_min + 10) begin 
-                    count <= count + 1; //pixel verde na coluna
+            end else if(eh_verde) begin  
+                    //count <= count + 1; //pixel verde na coluna
                     green_count <= green_count + 1; //pixel verde na região 
-                end
             end
         end
         if(green_count > THRESHOLD) begin 
